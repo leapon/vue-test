@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    main: ['./src/main.js'],
+    build: ['./src/main.js'],
     main2: ['./src/main2.js']
   },
   output: {
