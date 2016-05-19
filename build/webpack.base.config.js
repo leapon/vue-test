@@ -1,7 +1,7 @@
 module.exports = {
   entry: {
     build: ['./src/main.js'],
-    main2: ['./src/main2.js']
+    leap: ['./src/leap.js']
   },
   output: {
     path: './dist',
@@ -20,6 +20,10 @@ module.exports = {
         // make sure to exclude 3rd party code in node_modules
         exclude: /node_modules/
       },
+            {
+                test: /\.(woff|eot|ttf|woff2)$/i,
+                loader: 'file-loader?name=./css/[name].[ext]'
+            },
       {
         // edit this for additional asset file types
         test: /\.(png|jpg|gif)$/,
