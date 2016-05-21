@@ -9,7 +9,7 @@
 
 <template>
   <div class="container">
-    <h2 class="blue">{{ active_tab }}</h2>
+    <h2 class="blue">active: {{ active_tab }}</h2>
   </div>
 </template>
 
