@@ -20,6 +20,12 @@
   <alert type="warning" dismissable>
     <strong>Warning!</strong> Better check yourself, you're not looking too good.
   </alert>
+  <hr/>
+  
+  <div>
+    Calendar Select:
+    <calendar defaultDate="2016-03-29" dateType="day" dateValue="2016-03-29"></calendar>
+  </div>
   
 </template>
 
@@ -31,7 +37,6 @@ import CompB from './components/B.vue'
 
 import { alert } from 'vue-strap'
 import calendar from 'vue-calendar'
-import color from 'vue-color'
 import panel from 'vue-panel'
 
 export default {
@@ -47,7 +52,6 @@ export default {
     CompB,
     alert,
     calendar,
-    color,
     panel
   }
 }
