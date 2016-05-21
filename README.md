@@ -1,10 +1,5 @@
 # vue-loader example (deprecated)
 
-Deprecated in favor of [vue-cli](https://github.com/vuejs/vue-cli) and [webpack vue-cli template](https://github.com/vuejs-templates/webpack).
-
-[![Dependencies](https://img.shields.io/david/vuejs/vue-loader-example.svg?style=flat-square)](https://david-dm.org/vuejs/vue-loader-example)
-[![Dev Dependencies](https://img.shields.io/david/dev/vuejs/vue-loader-example.svg?style=flat-square)](https://david-dm.org/vuejs/vue-loader-example#info=devDependencies)
-
 > Example using [vue-loader](https://github.com/vuejs/vue-loader) with [Webpack](http://webpack.github.io).
 
 - To understand how things work, read the [docs for vue-loader](http://vuejs.github.io/vue-loader).
@@ -33,3 +28,17 @@ npm run build
 # run unit tests
 npm test
 ```
+
+
+Git Setup
+---------
+```
+git config user.name $GIT_USER_NAME
+git config user.email $GIT_USER_EMAIL
+
+git config credential.helper 'cache --timeout=3600'
+git config credential.helper store
+```
+
+
+
