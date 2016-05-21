@@ -10,7 +10,19 @@
   },
   "dependencies": {
     "vue": "^1.0.0",
-    "vue-strap": "^1.0.11"
+    "vue-awesome": "^0.3.0",
+    "vue-breadcrumbs": "^0.3.1",
+    "vue-calendar": "^0.1.5",
+    "vue-charts": "^0.1.14",
+    "vue-color": "0.0.5",
+    "vue-datetime-picker": "^0.1.1",
+    "vue-google-maps": "^0.1.17",
+    "vue-markdown": "^1.2.0",
+    "vue-panel": "^3.1.0",
+    "vue-strap": "^1.0.11",
+    "vue-table": "0.0.1",
+    "vue-transition": "^0.1.3",
+    "vue-typeahead": "^2.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.1.2",

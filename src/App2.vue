@@ -28,7 +28,11 @@ import LeapHeader from './components/LeapHeader.vue'
 import LeapFooter from './components/LeapFooter.vue'
 import CompA from './components/A.vue'
 import CompB from './components/B.vue'
+
 import { alert } from 'vue-strap'
+import calendar from 'vue-calendar'
+import color from 'vue-color'
+import panel from 'vue-panel'
 
 export default {
   data () {
@@ -41,7 +45,10 @@ export default {
     LeapFooter,
     CompA,
     CompB,
-    alert
+    alert,
+    calendar,
+    color,
+    panel
   }
 }
 </script>
