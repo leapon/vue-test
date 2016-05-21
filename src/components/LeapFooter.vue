@@ -8,7 +8,7 @@ h2 {
 </style>
 
 <template>
-  <div class="container">
+  <div>
     <h2>Leapon framework</h2>
   </div>
 </template>

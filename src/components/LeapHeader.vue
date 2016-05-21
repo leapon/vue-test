@@ -8,7 +8,7 @@
 </style>
 
 <template>
-  <div class="container">
+  <div>
     <h2 class="blue">active: {{ active_tab }}</h2>
   </div>
 </template>
