@@ -26,6 +26,22 @@
     Calendar Select:
     <calendar defaultDate="2016-03-29" dateType="day" dateValue="2016-03-29"></calendar>
   </div>
+  <hr/>
+  
+  <accordion :one-at-atime="checked">
+    <panel header="Panel #1" :is-open="true">
+      sum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+    </panel>
+    <panel header="Panel #2">
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio
+    </panel>
+    <panel header="Panel #3">
+      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio
+    </panel>
+    <panel header="Panel #4">
+      Ut enim ad minim veniam, quis nostrud exercitatio
+    </panel>
+  </accordion>
   
 </template>
 
@@ -35,9 +51,8 @@ import LeapFooter from './components/LeapFooter.vue'
 import CompA from './components/A.vue'
 import CompB from './components/B.vue'
 
-import { alert } from 'vue-strap'
+import { alert, panel, accordion } from 'vue-strap'
 import calendar from 'vue-calendar'
-import panel from 'vue-panel'
 
 export default {
   data () {
@@ -51,8 +66,9 @@ export default {
     CompA,
     CompB,
     alert,
-    calendar,
-    panel
+    panel,
+    accordion,
+    calendar
   }
 }
 </script>
