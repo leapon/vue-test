@@ -18,14 +18,10 @@
           <div id="keen1">
             <ui-toolbar
               :title="Keen UI" class="page-toolbar"
-              text-color="black" 
+              text-color="black"
             ></ui-toolbar>
             <br/>
-            
-            <ui-button @click="openGithub">Github</ui-button>
-            <br/>
-            <br/>
-            
+
             <ui-autocomplete
               label="Favourite Simpson" icon="face" :min-chars="0" :suggestions="theSimpsons"
               :value.sync="favouriteSimpson" name="favourite_simpson" validation-rules="required"
@@ -33,9 +29,40 @@
               help-text="Pick your favourite member of the Simpsons family"
             ></ui-autocomplete>
             <br/>
-            
-            
-            
+
+            <ui-tabs type="text">
+                <ui-tab header="Books">
+                    My books
+                    <br/><br/>
+                    <a href="gogole.com">Hey</a>
+                    <br/><br/>
+                </ui-tab>
+                <ui-tab header="Authors">
+                    Authors
+                    <br/><br/>
+                    <ui-button @click="openGithub">Github</ui-button>
+                    <br/><br/>
+                </ui-tab>
+                <ui-tab header="Collections">
+                    My collections
+                    <br/><br/>
+                    <h4>With icons</h4>
+                    <br/>
+                    <ui-menu :options="menuOptions" show-icons></ui-menu>
+                    <br/>
+                </ui-tab>
+                <ui-tab header="Favourites">
+                    My favourites
+                    <br/><br/>
+                    <h4>Default</h4>
+                    <br/>
+                    <ui-menu :options="menuOptions"></ui-menu>
+                    <br/>
+                </ui-tab>
+            </ui-tabs>
+            <br/>
+
+
           </div>
         </div>
         <div class="col-md-6">
@@ -43,7 +70,7 @@
         </div>
       </div>
     </div>
-    <!-- script -->  
+    <!-- script -->
     <script src="lib/vue/vue.js"></script>
     <script src="lib/keen-ui/keen-ui.js"></script>
     <script src="src/app.js"></script>

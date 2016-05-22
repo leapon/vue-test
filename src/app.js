@@ -36,6 +36,32 @@ new Vue({
           text: 'Homer Simpson',
           image: 'http://i.imgur.com/aYPRWX4.jpg'
         }
+      ],
+      menuOptions: [
+        {
+            id: 'edit',
+            text: 'Edit',
+            icon: 'edit',
+            secondaryText: 'Ctrl+E'
+        }, {
+            id: 'duplicate',
+            text: 'Duplicate',
+            icon: 'content_copy',
+            secondaryText: 'Ctrl+D'
+        }, {
+            id: 'share',
+            text: 'Share',
+            icon: 'share',
+            secondaryText: 'Ctrl+Shift+S',
+            disabled: true
+        }, {
+            type: 'divider'
+        }, {
+            id: 'delete',
+            text: 'Delete',
+            icon: 'delete',
+            secondaryText: 'Del'
+        }
       ]
     }
 });
