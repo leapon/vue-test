@@ -21,8 +21,25 @@
               text-color="black" 
             ></ui-toolbar>
             <br/>
+            
             <ui-button @click="openGithub">Github</ui-button>
+            <br/>
+            <br/>
+            
+            <ui-autocomplete
+              label="Favourite Simpson" icon="face" :min-chars="0" :suggestions="theSimpsons"
+              :value.sync="favouriteSimpson" name="favourite_simpson" validation-rules="required"
+              partial="ui-autocomplete-image" placeholder="Choose your favourite Simpson"
+              help-text="Pick your favourite member of the Simpsons family"
+            ></ui-autocomplete>
+            <br/>
+            
+            
+            
           </div>
+        </div>
+        <div class="col-md-6">
+          column 2
         </div>
       </div>
     </div>
