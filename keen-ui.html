@@ -3,17 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Vue Leap Test</title>
+    <!-- style -->
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
-    <script src="lib/vue/vue.js"></script>
-    <script src="lib/keen-ui/keen-ui.js"></script>
-    <script src="src/app.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="lib/keen-ui/keen-ui.css">
   </head>
   <body>
     <br/><br/>
     <div class="container">
       <div class="row">
-        <h2>Keen-ui</h2>
+        <div class="col-md-6">
+          <h2>Keen-ui</h2>
+          <br/>
+          <div id="keen1">
+            <ui-toolbar
+              :title="Keen UI" class="page-toolbar"
+              text-color="black" 
+            ></ui-toolbar>
+            <br/>
+            <ui-button @click="openGithub">Github</ui-button>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- script -->  
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/keen-ui/keen-ui.js"></script>
+    <script src="src/app.js"></script>
   </body>
 </html>
