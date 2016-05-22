@@ -47,6 +47,18 @@
         <div class="col-md-6">
           <div id="strap2">
 
+            <h4>Radio</h4>
+            <radio-group :value.sync="radioValue" type="primary">
+              <radio value="left">Left</radio>
+              <radio value="middle" checked>Middle</radio>
+              <radio value="right">Right</radio>
+            </radio-group>
+            <radio-group :value.sync="radioValue" type="success">
+              <radio value="left">Left</radio>
+              <radio value="middle" checked>Middle</radio>
+              <radio value="right">Right</radio>
+            </radio-group>
+            
           </div>
         </div>
       </div>
