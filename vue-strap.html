@@ -22,19 +22,25 @@
       <div class="row">
         <div class="col-md-6">
           <div id="strap1">
-            
+
             <alert type="success" >
               <strong>Well Done!</strong>
               You successfully read this important alert message.
             </alert>
-
             <alert type="info" >
               <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
             </alert>
-
             <alert type="danger" dismissable>
               <strong>Oh snap!</strong> Change a few things up and try submitting again.
             </alert>
+            <hr/>
+
+            <datepicker
+              :value.sync="value"
+              :disabled-days-of-Week="disabled"
+              :format="format"
+              :show-reset-button="reset">
+            </datepicker>
 
           </div>
         </div>
