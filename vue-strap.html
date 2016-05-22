@@ -22,24 +22,19 @@
       <div class="row">
         <div class="col-md-6">
           <div id="strap1">
+            
+            <alert type="success" >
+              <strong>Well Done!</strong>
+              You successfully read this important alert message.
+            </alert>
 
-            <input type="checkbox" v-model="checked">
-            <label for="checked">Open only one at a time.</label>
+            <alert type="info" >
+              <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+            </alert>
 
-            <accordion :one-at-atime="checked">
-              <panel header="Panel #1" :is-open="true">
-                ...
-              </panel>
-              <panel header="Panel #2">
-                ...
-              </panel>
-              <panel header="Panel #3">
-                ...
-              </panel>
-              <panel header="Panel #4">
-                ...
-              </panel>
-            </accordion>
+            <alert type="danger" dismissable>
+              <strong>Oh snap!</strong> Change a few things up and try submitting again.
+            </alert>
 
           </div>
         </div>
