@@ -16,12 +16,7 @@
           <h2>Keen-ui</h2>
           <br/>
           <div id="keen1">
-            <ui-toolbar
-              :title="Keen UI" class="page-toolbar"
-              text-color="black"
-            ></ui-toolbar>
-            <br/>
-
+            
             <ui-autocomplete
               label="Favourite Simpson" icon="face" :min-chars="0" :suggestions="theSimpsons"
               :value.sync="favouriteSimpson" name="favourite_simpson" validation-rules="required"
@@ -62,6 +57,20 @@
             </ui-tabs>
             <br/>
 
+            <ui-toolbar type="colored" text-color="white" title="Inbox">
+                <div slot="actions">
+                    <ui-icon-button
+                        type="clear" color="white" icon="arrow_back"
+                    ></ui-icon-button>
+                    <ui-icon-button
+                        type="clear" color="white" icon="star_border"
+                    ></ui-icon-button>
+                    <ui-icon-button
+                        type="clear" color="white" icon="more_vert" has-dropdown-menu
+                        :menu-options="menuOptions" dropdown-position="bottom right"
+                    ></ui-icon-button>
+                </div>
+            </ui-toolbar>
 
           </div>
         </div>
