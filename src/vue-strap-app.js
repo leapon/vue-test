@@ -17,7 +17,9 @@ var vm1 = new Vue({
 var vm2 = new Vue({
   components: {
     radio: VueStrap.radioBtn,
-    radioGroup: VueStrap.radioGroup
+    radioGroup: VueStrap.radioGroup,
+    checkbox: VueStrap.checkboxBtn,
+    checkboxGroup: VueStrap.checkboxGroup
   },
   el: "#strap2",
   data: {
