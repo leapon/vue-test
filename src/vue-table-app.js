@@ -1,21 +1,3 @@
-/*
-var vm1 = new Vue({
-  components: {
-  },
-  el: "#app1",
-  data: {
-  }
-})
-
-var vm2 = new Vue({
-  components: {
-  },
-  el: "#app2",
-  data: {
-  }
-})
-*/
-
 Vue.config.debug = true
 
 // fields definition
