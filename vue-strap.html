@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Leap Test</title>
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+    <style>
+    </style>
+  </head>
+  <body>
+    <br/><br/>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Vue-strap</h2>
+          <br/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div id="strap1">
+
+            <alert type="success" >
+              <strong>Well Done!</strong>
+              You successfully read this important alert message.
+            </alert>
+            <alert type="info" >
+              <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+            </alert>
+            <alert type="danger" dismissable>
+              <strong>Oh snap!</strong> Change a few things up and try submitting again.
+            </alert>
+            <hr/>
+
+            <datepicker
+              :value.sync="value"
+              :disabled-days-of-Week="disabled"
+              :format="format"
+              :show-reset-button="reset">
+            </datepicker>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="strap2">
+
+            <h4>Checkbox</h4>
+            <checkbox-group :value.sync="checkboxValue">
+              <checkbox value="left">Left</checkbox>
+              <checkbox value="middle" checked>Middle</checkbox>
+              <checkbox value="right">Right</checkbox>
+            </checkbox-group>
+            
+            <h4>Radio</h4>
+            <radio-group :value.sync="radioValue" type="primary">
+              <radio value="left">Left</radio>
+              <radio value="middle" checked>Middle</radio>
+              <radio value="right">Right</radio>
+            </radio-group>
+            <radio-group :value.sync="radioValue" type="success">
+              <radio value="left">Left</radio>
+              <radio value="middle" checked>Middle</radio>
+              <radio value="right">Right</radio>
+            </radio-group>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- script -->
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/vue-strap/vue-strap.js"></script>
+    <script src="lib/vue-strap-app.js"></script>
+  </body>
+</html>
