@@ -56,6 +56,7 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
+    // UglifyJS doesnot work with ES6 yet, need to transpile from ES6 to ES5
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
