@@ -1,14 +1,13 @@
 <style scoped>
-.container {
-  border: 1px solid #7f7f7f;
-}
-h2 {
-  color: #393;
+.leapon-footer-container {
+  padding: 8px;
+  border: solid 1px #f9f9f9;
+  color: #aaa;
 }
 </style>
 
 <template>
-  <div>
-    <h2>Leapon framework</h2>
+  <div class="leapon-footer-container">
+    <span>footer > Leapon framework</span>
   </div>
 </template>

@@ -1,15 +1,13 @@
 <style scoped>
-.container {
-  border: 1px solid #00f;
-}
-.red {
-  color: #f00;
+.leapon-header-container {
+  padding: 8px;
+  border: solid 1px #f9f9f9;
 }
 </style>
 
 <template>
-  <div>
-    <h2 class="blue">active: {{ active_tab }}</h2>
+  <div class="leapon-header-container">
+    header | <span class="blue">active: {{ active_tab }}</span>
   </div>
 </template>
 
