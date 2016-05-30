@@ -1,7 +1,6 @@
 {
-  "name": "vue-simple",
+  "name": "vue-test",
   "description": "A Vue.js project",
-  "author": "xxxxxxxxxxxxxxxxxxxxxxxxx <xxxxxxxxxxxxxxxxxxxxxxxxx>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
