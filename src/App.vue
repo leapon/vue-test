@@ -1,7 +1,11 @@
 <template>
   <div>
     <leap-header></leap-header>
-      <h4 style="padding-left:10px;">body content: {{ msg }}</h4>
+    <br/>
+    <h4 style="padding-left:10px;">body content: {{ msg }}</h4>
+    <br/>
+    <counter></counter>
+    <br/>
     <leap-footer></leap-footer>
   </div>
   <br/><br/>
@@ -16,6 +20,7 @@
 <script>
 import LeapHeader from './components/LeapHeader.vue'
 import LeapFooter from './components/LeapFooter.vue'
+import Counter from './components/Counter.vue'
 import TestSelect from './components/TestSelect.vue'
 import TestSelect2 from './components/TestSelect2.vue'
 
@@ -28,6 +33,7 @@ export default {
   components: {
     LeapHeader,
     LeapFooter,
+    Counter,
     TestSelect,
     TestSelect2
   }

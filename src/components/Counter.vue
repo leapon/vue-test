@@ -1,7 +1,7 @@
 <template>
   <div class="counter">
-    <h1>I am a Counter Component. Edit me in dev mode.</h1>
-    <p>Current count: {{count}}</p>
+    <p>I am a Counter Component</p>
+    <p>Current count: {{ count }}</p>
   </div>
 </template>
 
@@ -22,3 +22,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.counter {
+  padding: 10px;
+  border: solid 1px #f9f9f9;
+}
+</style>
