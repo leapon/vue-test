@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="lib/sweetalert/sweetalert.css">
     <style>
+      .vuetable-pagination-component {
+        float: right;
+      }
+      .vuetable-pagination-component li a {
+          cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -26,9 +32,23 @@
             <h4 class="ui header">List of Users</h4>
             <vuetable
                 api-url="http://vuetable.ratiw.net/api/users"
-                table-wrapper="#content"
                 :fields="columns"
                 :item-actions="itemActions"
+                pagination-path=""
+                :fields="fields"
+                :sort-order="sortOrder"
+                table-class="table table-bordered table-striped table-hover"
+                ascending-icon="glyphicon glyphicon-chevron-up"
+                descending-icon="glyphicon glyphicon-chevron-down"
+                pagination-class=""
+                pagination-info-class=""
+                pagination-component-class=""
+                :pagination-component="paginationComponent"
+                :append-params="moreParams"
+                :per-page="perPage"
+                wrapper-class="vuetable-wrapper"
+                table-wrapper=".vuetable-wrapper"
+                loading-class="loading"
             ></vuetable>
             
           </div>
