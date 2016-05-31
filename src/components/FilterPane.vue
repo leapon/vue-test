@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <p>Test</p>
+    <p>Filter Options</p>
     <hr/>
     <div v-for="field in fields">
       <div v-if="field.type == 'one'">
@@ -11,7 +10,8 @@
       </div>
       <br/>
     </div>
-  </div>
+    <hr/>
+    <button v-on:click="apply">Apply</button>
 </template>
 
 <script>
@@ -28,6 +28,20 @@ export default {
   components: {
     SelectMulti,
     SelectOne
+  },
+  activate: function (done) {
+    console.log('>>> activate');
+    done();
+  },
+  methods: {
+    apply: function () {
+      console.log('>>> apply');
+    }
+  },
+  events: {
+    'filter-change': function () {
+      console.log('>>> filter change event');
+    }
   }
 }
 </script>
