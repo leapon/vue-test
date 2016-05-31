@@ -25,7 +25,7 @@
   </div>
   <br/><br/>
   <div>
-    
+    <manual-counter></manual-counter>
   </div>
 </template>
 
@@ -36,7 +36,7 @@ import SecondCounter from './components/SecondCounter.vue'
 import TestSelect from './components/TestSelect.vue'
 import SelectOne from './components/SelectOne.vue'
 import SelectMulti from './components/SelectMulti.vue'
-//import ManualCounter from './components/ManualCounter.vue'
+import ManualCounter from './components/ManualCounter.vue'
 
 export default {
   data () {
@@ -50,8 +50,8 @@ export default {
     SecondCounter,
     TestSelect,
     SelectOne,
-    SelectMulti
-    //ManualCounter
+    SelectMulti,
+    ManualCounter
   }
 }
 </script>
