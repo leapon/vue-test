@@ -16,7 +16,7 @@ export default {
   props: ['fields'],
   data () {
     return {
-      msg: 'Nice Vue'
+      msg: ''
     }
   },
   components: {
