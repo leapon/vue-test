@@ -4,7 +4,7 @@
     <br/>
     <h4 style="padding-left:10px;">body content: {{ msg }}</h4>
     <br/>
-    <counter></counter>
+    <second-counter></second-counter>
     <br/>
     <leap-footer></leap-footer>
   </div>
@@ -28,7 +28,7 @@
 <script>
 import LeapHeader from './components/LeapHeader.vue'
 import LeapFooter from './components/LeapFooter.vue'
-import Counter from './components/Counter.vue'
+import SecondCounter from './components/SecondCounter.vue'
 import TestSelect from './components/TestSelect.vue'
 import SelectOne from './components/SelectOne.vue'
 import SelectMulti from './components/SelectMulti.vue'
@@ -42,7 +42,7 @@ export default {
   components: {
     LeapHeader,
     LeapFooter,
-    Counter,
+    SecondCounter,
     TestSelect,
     SelectOne,
     SelectMulti
