@@ -7,7 +7,7 @@
         <select-one :label=field.name :values=field.values></select-one>
       </div>
       <div v-if="field.type == 'multi'">
-        <test-select2 :label=field.name :values=field.values></test-select2>
+        <select-multi :label=field.name :values=field.values></select-multi>
       </div>
       <br/>
     </div>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import TestSelect2 from './TestSelect2.vue'
+import SelectMulti from './SelectMulti.vue'
 import SelectOne from './SelectOne.vue'
 
 export default {
@@ -26,7 +26,7 @@ export default {
     }
   },
   components: {
-    TestSelect2,
+    SelectMulti,
     SelectOne
   }
 }

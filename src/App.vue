@@ -13,7 +13,15 @@
     <h4>Select Test</h4>
     <test-select></test-select>
     <br/>
-    <test-select2></test-select2>
+    <select-one
+      :label="Select State"
+      :values='[{"name":"MD"},{"name":"VA"}]'
+    ></select-one>
+    <br/>
+    <select-multi
+      :label="Select States"
+      :values='[{"name":"MD"},{"name":"VA"},{"name":"DC"}]'
+    ></select-multi>
   </div>
 </template>
 
@@ -22,7 +30,8 @@ import LeapHeader from './components/LeapHeader.vue'
 import LeapFooter from './components/LeapFooter.vue'
 import Counter from './components/Counter.vue'
 import TestSelect from './components/TestSelect.vue'
-import TestSelect2 from './components/TestSelect2.vue'
+import SelectOne from './components/SelectOne.vue'
+import SelectMulti from './components/SelectMulti.vue'
 
 export default {
   data () {
@@ -35,7 +44,8 @@ export default {
     LeapFooter,
     Counter,
     TestSelect,
-    TestSelect2
+    SelectOne,
+    SelectMulti
   }
 }
 </script>
