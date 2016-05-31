@@ -23,6 +23,10 @@
       :values='[{"name":"MD"},{"name":"VA"},{"name":"DC"}]'
     ></select-multi>
   </div>
+  <br/><br/>
+  <div>
+    
+  </div>
 </template>
 
 <script>
@@ -32,6 +36,7 @@ import SecondCounter from './components/SecondCounter.vue'
 import TestSelect from './components/TestSelect.vue'
 import SelectOne from './components/SelectOne.vue'
 import SelectMulti from './components/SelectMulti.vue'
+//import ManualCounter from './components/ManualCounter.vue'
 
 export default {
   data () {
@@ -46,6 +51,7 @@ export default {
     TestSelect,
     SelectOne,
     SelectMulti
+    //ManualCounter
   }
 }
 </script>

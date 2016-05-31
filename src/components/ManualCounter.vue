@@ -21,15 +21,16 @@
                 decrement
             }
         }
-      }
     }
 </script>
 
 <style>
+    /*
     .counter {
         border: 1px solid black;
         padding: 1rem 2rem;
         margin: 1rem;
         display: inline-block;
     }
+    */
 </style>
