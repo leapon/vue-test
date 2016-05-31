@@ -1,31 +1,27 @@
 import Vue from 'vue'
 import FilterPane from './FilterPane.vue'
 
+var values = [
+  {"name":"MD"},
+  {"name":"VA"},
+  {"name":"DC"}
+];
+
 new Vue({
   el: '#side_panel',
   data: {
     fields: [
       {
         "name":"gender",
-        "values":[
-          {"name":"MD"},
-          {"name":"VA"}
-        ]
+        "values":values
       },
       {
         "name":"race",
-        "values":[
-          {"name":"MD"},
-          {"name":"VA"},
-          {"name":"DC"}
-        ]
+        "values":values
       },
       {
         "name":"species",
-        "values":[
-          {"name":"MD"},
-          {"name":"DC"}
-        ]
+        "values":values
       }
     ]
   },
