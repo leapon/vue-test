@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>{{ label }}</p>
     <multiselect
       :options="source",
       :selected.sync="multiValue",
@@ -17,6 +18,7 @@
 import Multiselect from 'vue-multiselect'
 
 export default {
+  props: ['label'],
   components: { Multiselect },
   data () {
     return {

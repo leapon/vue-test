@@ -1,10 +1,11 @@
 <template>
   <div>
     <p>Test</p>
-    <test-select2></test-select2>
     <hr/>
-    <p v-for="field in fields">{{ field.name }}</p>
-    
+    <div v-for="field in fields">
+      <test-select2 :label=field.name></test-select2>
+      <br/>
+    </div>
   </div>
 </template>
 
