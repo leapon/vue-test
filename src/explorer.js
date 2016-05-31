@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import FilterPane from './FilterPane.vue'
+import FilterPane from './components/FilterPane.vue'
 
 var values = [
   { name: "MD" },
