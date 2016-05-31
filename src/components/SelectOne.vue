@@ -23,7 +23,7 @@ export default {
   components: { Multiselect },
   data () {
     return {
-      multiValue: null,
+      value: null,
       source: this.$get('values')
     }
   }

@@ -13,7 +13,7 @@ new Vue({
     fields: [
       {
         name: "gender",
-        type: "single",
+        type: "one",
         values: values
       },
       {
