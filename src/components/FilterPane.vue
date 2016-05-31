@@ -31,13 +31,13 @@ export default {
   },
   computed: {
     filterdata: function() {
-      var data = {};
+      var userdata = {};
       for (let child of this.$children) {
         console.log('>>> child:', child.$get('value'));
-        data[child.$get('name')] = child.$get('value');
+        userdata[child.$get('name')] = child.$get('value');
       }
-      console.log('>>> filter data:', data);
-      return data;
+      console.log('>>> filter userdata:', userdata);
+      return userdata;
     }
   },
   activate: function (done) {
@@ -52,12 +52,10 @@ export default {
         userdata[child.$get('name')] = child.$get('value');
       }
       console.log('>>> apply - userdata:', userdata);
+      this.$dispatch('filter-change', userdata);
     }
   },
   events: {
-    'filter-change': function () {
-      console.log('>>> filter change event');
-    }
   }
 }
 </script>
