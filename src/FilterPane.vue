@@ -1,7 +1,5 @@
 <template>
   <div>
-    <test-select></test-select>
-    <br/>
     <test-select2></test-select2>
     <br/>
     <test-select2></test-select2>
@@ -13,7 +11,6 @@
 </template>
 
 <script>
-import TestSelect from './components/TestSelect.vue'
 import TestSelect2 from './components/TestSelect2.vue'
 
 export default {
@@ -23,7 +20,6 @@ export default {
     }
   },
   components: {
-    TestSelect,
     TestSelect2
   }
 }
