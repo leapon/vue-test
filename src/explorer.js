@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import store from './vuex/store'
 import FilterPane from './components/FilterPane.vue'
 
 var values = [
@@ -9,6 +10,7 @@ var values = [
 
 new Vue({
   el: '#side_panel',
+  store,
   data: {
     fields: [
       {
