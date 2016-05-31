@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>{{ label }}</p>
-    <p>values: {{ values }}</p>
+    <p>values: {{ values.length }}</p>
     <multiselect
       :options="source",
       :selected.sync="multiValue",
