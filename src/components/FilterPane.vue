@@ -29,17 +29,29 @@ export default {
     SelectMulti,
     SelectOne
   },
+  computed: {
+    filterdata: function() {
+      var data = {};
+      for (let child of this.$children) {
+        console.log('>>> child:', child.$get('value'));
+        data[child.$get('name')] = child.$get('value');
+      }
+      console.log('>>> filter data:', data);
+      return data;
+    }
+  },
   activate: function (done) {
     console.log('>>> activate');
     done();
   },
   methods: {
     apply: function () {
-      console.log('>>> apply');
       // collect filter values from child components
+      var userdata = {};
       for (let child of this.$children) {
-        console.log('>>> child:', child.$get('value'));
+        userdata[child.$get('name')] = child.$get('value');
       }
+      console.log('>>> apply - userdata:', userdata);
     }
   },
   events: {
