@@ -19,7 +19,7 @@
 import Multiselect from 'vue-multiselect'
 
 export default {
-  props: ['label', 'values'],
+  props: ['name', 'label', 'values'],
   components: { Multiselect },
   data () {
     return {

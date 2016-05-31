@@ -3,10 +3,10 @@
     <hr/>
     <div v-for="field in fields">
       <div v-if="field.type == 'one'">
-        <select-one :label=field.name :values=field.values></select-one>
+        <select-one :name=field.name :label=field.label :values=field.values></select-one>
       </div>
       <div v-if="field.type == 'multi'">
-        <select-multi :label=field.name :values=field.values></select-multi>
+        <select-multi :name=field.name :label=field.label :values=field.values></select-multi>
       </div>
       <br/>
     </div>
@@ -36,6 +36,10 @@ export default {
   methods: {
     apply: function () {
       console.log('>>> apply');
+      // collect filter values from child components
+      for (let child of this.$children) {
+        console.log('>>> child:', child.$get('value'));
+      }
     }
   },
   events: {

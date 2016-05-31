@@ -2,9 +2,9 @@ import Vue from 'vue'
 import FilterPane from './components/FilterPane.vue'
 
 var values = [
-  { name: "MD" },
-  { name: "VA" },
-  { name: "DC" }
+  { name: 'MD' },
+  { name: 'VA' },
+  { name: 'DC' }
 ];
 
 new Vue({
@@ -12,18 +12,21 @@ new Vue({
   data: {
     fields: [
       {
-        name: "gender",
-        type: "one",
+        name: 'gender',
+        label: 'Gender',
+        type: 'one',
         values: values
       },
       {
-        name: "race",
-        type: "multi",
+        name: 'race',
+        label: 'Race',
+        type: 'multi',
         values: values
       },
       {
-        name: "species",
-        type: "multi",
+        name: 'species',
+        label: 'Species',
+        type: 'multi',
         values: values
       }
     ]

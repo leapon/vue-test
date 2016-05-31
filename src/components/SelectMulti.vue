@@ -3,7 +3,7 @@
     <p>{{ label }}</p>
     <multiselect
       :options="source",
-      :selected.sync="multiValue",
+      :selected.sync="value",
       :multiple="true",
       :searchable="true",
       placeholder="Pick states",
@@ -18,11 +18,11 @@
 import Multiselect from 'vue-multiselect'
 
 export default {
-  props: ['label', 'values'],
+  props: ['name', 'label', 'values'],
   components: { Multiselect },
   data () {
     return {
-      multiValue: null,
+      value: null,
       source: this.$get('values')
     }
   }
