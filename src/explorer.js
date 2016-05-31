@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import App from './App.vue'
+import FilterPane from './FilterPane.vue'
 
 new Vue({
-  el: 'body',
-  components: { App }
+  el: '#side_panel',
+  components: { FilterPane }
 })
