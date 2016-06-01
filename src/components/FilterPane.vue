@@ -62,8 +62,7 @@ export default {
       }
       console.log('>>> apply - userdata:', userdata);
       //this.$dispatch('filter-change', userdata);
-      //setfilter(state, userdata);
-      
+      setfilter(this.$store, userdata);
     }
   },
   events: {
