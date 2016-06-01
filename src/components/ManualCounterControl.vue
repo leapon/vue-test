@@ -14,8 +14,8 @@ export default {
       count: state => state.count
     },
     actions: {
-        increment,
-        decrement
+      increment,
+      decrement
     }
   }
 }

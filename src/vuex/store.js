@@ -17,7 +17,7 @@ const mutations = {
   DECREMENT (state) {
     state.count--
   },
-  SETFILTER (filter) {
+  SETFILTER (state, filter) {
     state.filter = filter
   }
 }

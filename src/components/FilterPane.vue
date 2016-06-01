@@ -17,12 +17,21 @@
 <script>
 import SelectMulti from './SelectMulti.vue'
 import SelectOne from './SelectOne.vue'
+import { setfilter } from '../vuex/actions';
 
 export default {
   props: ['fields'],
   data () {
     return {
       msg: ''
+    }
+  },
+  vuex: {
+    getters: {
+      filter: state => state.filter
+    },
+    actions: {
+      setfilter
     }
   },
   components: {
@@ -52,7 +61,9 @@ export default {
         userdata[child.$get('name')] = child.$get('value');
       }
       console.log('>>> apply - userdata:', userdata);
-      this.$dispatch('filter-change', userdata);
+      //this.$dispatch('filter-change', userdata);
+      //setfilter(state, userdata);
+      
     }
   },
   events: {
