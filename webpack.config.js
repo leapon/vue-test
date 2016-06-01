@@ -4,7 +4,8 @@ var webpack = require('webpack')
 module.exports = {
   entry: {
     build: ['./src/main.js'],
-    explorer: ['./src/explorer.js']
+    explorer: ['./src/explorer.js'],
+    plot: ['./src/plot.js']
   },
   output: {
     path: './dist',
