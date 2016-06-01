@@ -31,6 +31,10 @@
   <div>
     <manual-counter-control></manual-counter-control>
   </div>
+  <hr/>
+  <div>
+    <manual-counter-display></manual-counter-display>
+  </div>
 </template>
 
 <script>
@@ -42,6 +46,7 @@ import SelectOne from './components/SelectOne.vue'
 import SelectMulti from './components/SelectMulti.vue'
 import ManualCounter from './components/ManualCounter.vue'
 import ManualCounterControl from './components/ManualCounterControl.vue'
+import ManualCounterDisplay from './components/ManualCounterDisplay.vue'
 
 export default {
   data () {
@@ -57,7 +62,8 @@ export default {
     SelectOne,
     SelectMulti,
     ManualCounter,
-    ManualCounterControl
+    ManualCounterControl,
+    ManualCounterDisplay
   }
 }
 </script>

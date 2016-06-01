@@ -1,10 +1,8 @@
 <template>
     <div class="counter">
       Clicked: {{ count }} times
-      <!--
       <button v-on:click="increment">+</button>
       <button v-on:click="decrement">-</button>
-      -->
     </div>
 </template>
 
