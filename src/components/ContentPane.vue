@@ -1,7 +1,9 @@
 <template>
-    <p>{{ testmsg }}</p>
-    <hr/>
-    <p>{{ dataitems.length }}</p>
+  <p>{{ testmsg }}</p>
+  <hr/>
+  <div v-for="dataitem in dataitems">
+    <p>{{ dataitem.id }} - {{ dataitem.name }}</p>
+  </div>
 </template>
 
 <script>
