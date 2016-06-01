@@ -1,6 +1,8 @@
 <template>
   <p>{{ testmsg }}</p>
   <hr/>
+  <p>{{ filter|json }}</p>
+  <hr/>
   <div v-for="dataitem in dataitems">
     <p>{{ dataitem.id }} - {{ dataitem.name }}</p>
   </div>
@@ -12,6 +14,11 @@ export default {
   data () {
     return {
       testmsg: 'test message'
+    }
+  },
+  vuex: {
+    getters: {
+      filter: state => state.filter
     }
   },
   activate: function (done) {

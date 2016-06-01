@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 // app initial state
 const state = {
-  count: 0
+  count: 0,
+  filter: {}
 }
 
 // define possible mutations
@@ -15,6 +16,9 @@ const mutations = {
   },
   DECREMENT (state) {
     state.count--
+  },
+  SETFILTER (filter) {
+    state.filter = filter
   }
 }
 
