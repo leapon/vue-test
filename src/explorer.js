@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import store from './vuex/store'
 import FilterPane from './components/FilterPane.vue'
+import ContentPane from './components/ContentPane.vue'
 
 var values = [
   { name: 'MD' },
@@ -33,5 +34,26 @@ new Vue({
       }
     ]
   },
-  components: { FilterPane }
+  components: {
+    FilterPane
+  }
 })
+
+
+new Vue({
+  el: '#main_panel',
+  store,
+  data: {
+    dataitems:[
+        { id:1, name:"jack" },
+        { id:2, name:"mary" },
+        { id:3, name:"zack" },
+        { id:4, name:"alex" },
+        { id:5, name:"cathy" }
+    ]
+  },
+  components: {
+    ContentPane
+  }
+})
+

@@ -41,7 +41,7 @@ export default {
     }
   },
   activate: function (done) {
-    console.log('>>> activate');
+    console.log('>>> activate FilterPane');
     done();
   },
   methods: {
