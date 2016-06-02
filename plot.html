@@ -49,6 +49,10 @@
         </div>
         <div class="col-md-4" id="plot3">
           <br/>
+          <div id="plot_test1">
+            <p>plot value: {{ plotvalue }}</p>
+            <div v-barplot="plotvalue" :plotdata="plotdata"></div>
+          </div>
         </div>
       </div>
     </div>
