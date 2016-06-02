@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/plotly/plotly.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -19,6 +20,10 @@
         <div class="col-md-4" id="plot1">
           <h4>Plot Test</h4>
           <simple-label label="Hello"></simple-label>
+          <br/>
+          <simple-label2 v-my-directive="mydirective" label="Hello2"></simple-label2>
+          <br/>
+          <barplot label="Barplot"></barplot>
         </div>
         <div class="col-md-4" id="plot2">
           <br/>
