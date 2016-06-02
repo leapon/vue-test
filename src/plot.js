@@ -46,14 +46,26 @@ Vue.directive('select', {
 })
 
 var vm = new Vue({
-  el: '#el',
+  el: '#select2_test',
   data: {
-    selected: 1,
+    result_value: 1,
     options: [
       { id: 1, text: 'hello' },
-      { id: 2, text: 'what' }
+      { id: 2, text: 'what' },
+      { id: 3, text: 'world' }
     ]
   }
 })
 
+var vm = new Vue({
+  el: '#select2_test2',
+  data: {
+    result_value: 2,
+    options: [
+      { id: 1, text: 'hello' },
+      { id: 2, text: 'what' },
+      { id: 3, text: 'world' }
+    ]
+  }
+})
 

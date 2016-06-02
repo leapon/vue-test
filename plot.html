@@ -5,6 +5,11 @@
     <title>vue test</title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="lib/select2/css/select2.min.css" />
+    <style>
+      select {
+        min-width: 300px;
+      }
+    </style>
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/select2/js/select2.min.js"></script>
@@ -30,10 +35,15 @@
         </div>
         <div class="col-md-4" id="plot2">
           <br/>
-          <div id="el">
-            <p>Selected: {{selected}}</p>
-            <select v-select="selected" :options="options">
-              <option value="0">default</option>
+          <div id="select2_test">
+            <p>Selected: {{ result_value }}</p>
+            <select v-select="result_value" :options="options">
+            </select>
+          </div>
+          <hr/>
+          <div id="select2_test2">
+            <p>Selected: {{ result_value }}</p>
+            <select v-select="result_value" :options="options">
             </select>
           </div>
         </div>
