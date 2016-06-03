@@ -1,32 +1,28 @@
 <template>
   <div class="barplot-container">
-    <div v-select2=""></div>
+    <div v-barplot :data='{ "name":"jack", "val":21 }'></div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['label'],
+  props: [],
   components: {},
   directives: {
-    select2: {
+    barplot: {
       twoWay: true,
-      params: ['options'],
+      params: ['data'],
       bind: function () {
-        var self = this
-        var plotData = {
-          "value": {
-            "data": [
-              {
-                "x": ["Apple", "Orange", "Melon"],
-                "y": [12, 15, 27],
-                "type": "bar"
-              }
-            ]
-          }
-        };
+        var self = this;
+        console.log('>>> bind this:', this);
         // draw plot using plotly
-        var data = plotData.value.data;
+        var data = [
+          {
+            "x": ["Apple", "Orange", "Melon"],
+            "y": [12, 15, 27],
+            "type": "bar"
+          }
+        ];
         var layout = {
           autosize: false,
           width: 400,
@@ -39,10 +35,6 @@ export default {
   data () {
     return {
     }
-  },
-  activate: function (done) {
-    console.log('>>> activate Barplot');
-    done();
   }
 }
 </script>
