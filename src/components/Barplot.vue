@@ -1,25 +1,33 @@
 <template>
   <div class="barplot-container">
-    <div v-barplot :data=data></div>
+    <div v-barplot :data=data :layout=layout></div>
   </div>
 </template>
 
 <script>
+function parseJSON(input) {
+  var result = null;
+  try {
+    result = JSON.parse(input);
+  } catch (e) {}
+  return result;
+}
+
 export default {
-  props: ['label', 'data'],
+  props: ['label', 'data', 'layout'],
   components: {},
   directives: {
     barplot: {
       twoWay: true,
-      params: ['data'],
+      params: ['data', 'layout'],
       bind: function () {
         var self = this;
-        var data = JSON.parse(this.params.data);
-        var layout = {
+        var data = parseJSON(this.params.data) || [];
+        var layout = parseJSON(this.params.layout) || {
           autosize: false,
           width: 400,
           height: 420
-        }
+        };
         Plotly.plot(this.el, data, layout, { displayModeBar:false });
       }
     }
