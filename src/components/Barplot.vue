@@ -1,39 +1,48 @@
 <template>
   <div class="barplot-container">
-    <div>label: {{ label }}</div>
-    <div id="barplot1"></div>
+    <p>Selected: {{ result_value }}</p>
+    <div v-select2=""></div>
   </div>
 </template>
 
 <script>
-//var plotly = require('plotly.js');
-
 export default {
   props: ['label'],
   components: {},
+  directives: {
+    select2: {
+      twoWay: true,
+      params: ['options'],
+      bind: function () {
+        var self = this
+        var plotData = {
+          "value": {
+            "data": [
+              {
+                "x": ["Apple", "Orange", "Melon"],
+                "y": [12, 15, 27],
+                "type": "bar"
+              }
+            ]
+          }
+        };
+        // draw plot using plotly
+        var data = plotData.value.data;
+        var layout = {
+          autosize: false,
+          width: 400,
+          height: 420
+        }
+        Plotly.plot(this.el, data, layout, { displayModeBar:false });
+      }
+    }
+  },
   data () {
     return {
     }
   },
   activate: function (done) {
     console.log('>>> activate Barplot');
-    /*
-    var data = [
-      {
-        "x": [
-          "Female",
-          "Male"
-        ],
-        "y": [
-          17,
-          22
-        ],
-        "type": "bar"
-      }
-    ];
-    var layout = null;
-    Plotly.plot('#barplot1', data, layout, { displayModeBar:false });
-    */
     done();
   }
 }

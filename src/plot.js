@@ -20,13 +20,13 @@ new Vue({
   }
 })
 
-// directive for applying select2 
+// directive for applying select2
 Vue.directive('select', {
   twoWay: true,
   priority: 1000,
 
   params: ['options'],
-    
+
   bind: function () {
     var self = this
     $(this.el)
@@ -77,11 +77,11 @@ Vue.directive('barplot', {
   priority: 1000,
 
   params: ['plotdata'],
-    
+
   bind: function () {
     var self = this
     console.log('>>> barplot directive bind');
-    
+
     var plotData = {
         "value": {
             "data": [
@@ -103,7 +103,7 @@ Vue.directive('barplot', {
     var data = plotData.value.data;
     var layout = plotData.layout;
     Plotly.plot(this.el, data, layout, { displayModeBar:false });
-    
+
     /*
     $(this.el)
       .select2({
