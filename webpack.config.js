@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     build: ['./src/main.js'],
     explorer: ['./src/explorer.js'],
+    directive: ['./src/directive.js'],
     plot: ['./src/plot.js']
   },
   output: {

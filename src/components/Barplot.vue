@@ -1,6 +1,5 @@
 <template>
   <div class="barplot-container">
-    <p>Selected: {{ result_value }}</p>
     <div v-select2=""></div>
   </div>
 </template>
