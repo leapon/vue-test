@@ -23,19 +23,20 @@
           <br/>
           <barplot
             label="Barplot Test 1"
-            :data=plotdata1
+            :data= plotdata1
+            :layout= layout1
           ></barplot>
           <br/>
           <barplot
             label="Barplot Test 2"
-            data='[{ "x":["Apple", "Orange"], "y":[23, 18], "type":"bar" }]'
-            layout='{ "width":300, "height":300 }'
+            :data= plotdata2
+            :layout= layout2
           ></barplot>
           <br/>
           <barplot
             label="Barplot Test 3"
-            data='[{ "x":["Superman", "Batman"], "y":[12, 18], "type":"bar" }]'
-            layout='{ "width":360, "height":360 }'
+            :data='[{ "x":["Superman", "Batman"], "y":[12, 18], "type":"bar" }]'
+            :layout='{ "width":360, "height":360 }'
           ></barplot>
         </div>
         <div class="col-md-4" id="plot2">

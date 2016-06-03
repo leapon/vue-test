@@ -1,5 +1,4 @@
 <template>
-  <p>input: {{ data|json }}</p>
   <div class="barplot-container">
     <div v-barplot :data=data :layout=layout></div>
   </div>
@@ -8,9 +7,13 @@
 <script>
 function parseJSON(input) {
   var result = null;
-  try {
-    result = JSON.parse(input);
-  } catch (e) {}
+  if(typeof input === 'string') {
+    try {
+      result = JSON.parse(input);
+    } catch (e) {}
+  } else {
+    result = input;
+  }
   return result;
 }
 

@@ -6,13 +6,10 @@ new Vue({
   el: '#plot1',
   store,
   data: {
-    fields: [
-      {
-        name: 'gender',
-        label: 'Gender'
-      }
-    ],
-    plotdata1: [{ "x":["A", "B"], "y":[3, 5], "type":"bar" }]
+    plotdata1: [{ "x":["A", "B"], "y":[3, 5], "type":"bar" }],
+    layout1: null,
+    plotdata2: [{ "x":["Apple", "Orange"], "y":[23, 18], "type":"bar" }],
+    layout2: { "width":300, "height":300 }
   },
   components: {
     Barplot
