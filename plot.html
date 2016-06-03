@@ -22,19 +22,25 @@
         <div class="col-md-4" id="plot1">
           <br/>
           <barplot
-            label="Barplot Test 1"
+            :label="Barplot Test 1"
             :data= plotdata1
             :layout= layout1
           ></barplot>
           <br/>
           <barplot
-            label="Barplot Test 2"
+            :label="Barplot Test 2"
             :data= plotdata2
             :layout= layout2
           ></barplot>
           <br/>
           <barplot
-            label="Barplot Test 3"
+            :label="Scatter Plot"
+            :data= scatter1
+            :layout= layout3
+          ></barplot>
+          <br/>
+          <barplot
+            :label="Barplot Test 3"
             :data='[{ "x":["Superman", "Batman"], "y":[12, 18], "type":"bar" }]'
             :layout='{ "width":360, "height":360 }'
           ></barplot>
