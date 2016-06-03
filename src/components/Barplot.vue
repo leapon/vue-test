@@ -14,11 +14,7 @@ export default {
       params: ['data'],
       bind: function () {
         var self = this;
-        console.log('>>> bind this.params.data:', this.params.data);
-        var testdata = JSON.parse(this.params.data);
-        console.log('>>>', testdata.type);
-        // draw plot using plotly
-        var data = [testdata];
+        var data = JSON.parse(this.params.data);
         var layout = {
           autosize: false,
           width: 400,
@@ -33,9 +29,9 @@ export default {
     }
   },
   activate: function (done) {
-    console.log('>>> activate Barplot component');
-    console.log('>>> label:', this.$get('label'));
-    console.log('>>> data:', this.$get('data'));
+    //console.log('>>> activate Barplot component');
+    //console.log('>>> label:', this.$get('label'));
+    //console.log('>>> data:', this.$get('data'));
     done();
   },
 }
