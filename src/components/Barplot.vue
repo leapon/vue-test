@@ -1,4 +1,5 @@
 <template>
+  <p>input: {{ data|json }}</p>
   <div class="barplot-container">
     <div v-barplot :data=data :layout=layout></div>
   </div>
@@ -37,6 +38,7 @@ export default {
     }
   },
   activate: function (done) {
+    console.log('>>>', this.$vm);
     //console.log('>>> activate Barplot component');
     //console.log('>>> label:', this.$get('label'));
     //console.log('>>> data:', this.$get('data'));

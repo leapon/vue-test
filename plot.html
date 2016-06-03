@@ -15,24 +15,27 @@
       <div class="row">
         <div class="col-md-12">
           <h4><a href="/">Vue Test</a></h4>
-          <span>Plot Test</span>
+          <br/>
         </div>
       </div>
-      <hr/>
       <div class="row">
         <div class="col-md-4" id="plot1">
           <br/>
-          <barplot label="Barplot Test 1"
-            data='[{ "x":["A", "B"], "y":[3, 5], "type":"bar" }]'
+          <barplot
+            label="Barplot Test 1"
+            :data=plotdata1
           ></barplot>
           <br/>
-          <barplot label="Barplot Test 2"
+          <barplot
+            label="Barplot Test 2"
             data='[{ "x":["Apple", "Orange"], "y":[23, 18], "type":"bar" }]'
             layout='{ "width":300, "height":300 }'
           ></barplot>
           <br/>
-          <barplot label="Barplot Test 3"
+          <barplot
+            label="Barplot Test 3"
             data='[{ "x":["Superman", "Batman"], "y":[12, 18], "type":"bar" }]'
+            layout='{ "width":360, "height":360 }'
           ></barplot>
         </div>
         <div class="col-md-4" id="plot2">
