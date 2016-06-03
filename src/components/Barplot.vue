@@ -1,12 +1,12 @@
 <template>
   <div class="barplot-container">
-    <div v-barplot :data='{ "name":"jack", "val":21 }'></div>
+    <div v-barplot :data=data></div>
   </div>
 </template>
 
 <script>
 export default {
-  props: [],
+  props: ['label', 'data'],
   components: {},
   directives: {
     barplot: {
@@ -14,7 +14,7 @@ export default {
       params: ['data'],
       bind: function () {
         var self = this;
-        console.log('>>> bind this:', this);
+        console.log('>>> bind this.params.data:', this.params.data);
         // draw plot using plotly
         var data = [
           {
@@ -35,7 +35,13 @@ export default {
   data () {
     return {
     }
-  }
+  },
+  activate: function (done) {
+    console.log('>>> activate Barplot component');
+    console.log('>>> label:', this.$get('label'));
+    console.log('>>> data:', this.$get('data'));
+    done();
+  },
 }
 </script>
 
