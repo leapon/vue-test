@@ -5,7 +5,7 @@ import SimpleLabel2 from './components/SimpleLabel2.vue'
 import Barplot from './components/Barplot.vue'
 
 Vue.directive('my-directive', function (newValue, oldValue) {
-  console.log('>>> my-directive update:', newValue, oldValue);
+  //console.log('>>> my-directive update:', newValue, oldValue);
 })
 
 new Vue({
@@ -24,9 +24,7 @@ new Vue({
 Vue.directive('select', {
   twoWay: true,
   priority: 1000,
-
   params: ['options'],
-
   bind: function () {
     var self = this
     $(this.el)
@@ -69,19 +67,14 @@ var vm = new Vue({
   }
 })
 
-
 // barplot directive
-
 Vue.directive('barplot', {
   twoWay: true,
   priority: 1000,
-
-  params: ['plotdata'],
-
+  params: [],
   bind: function () {
     var self = this
     console.log('>>> barplot directive bind');
-
     var plotData = {
         "value": {
             "data": [
@@ -103,29 +96,8 @@ Vue.directive('barplot', {
     var data = plotData.value.data;
     var layout = plotData.layout;
     Plotly.plot(this.el, data, layout, { displayModeBar:false });
-
-    /*
-    $(this.el)
-      .select2({
-        data: this.params.options
-      })
-      .on('change', function () {
-        self.set(this.value)
-      })
-    */
   }
-  /*
-  update: function (value) {
-    $(this.el).val(value).trigger('change')
-  },
-  unbind: function () {
-    $(this.el).off().select2('destroy')
-  }
-  */
 })
-
-
-
 
 var vm = new Vue({
   el: '#plot_test1',
