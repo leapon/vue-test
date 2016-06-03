@@ -15,14 +15,10 @@ export default {
       bind: function () {
         var self = this;
         console.log('>>> bind this.params.data:', this.params.data);
+        var testdata = JSON.parse(this.params.data);
+        console.log('>>>', testdata.type);
         // draw plot using plotly
-        var data = [
-          {
-            "x": ["Apple", "Orange", "Melon"],
-            "y": [12, 15, 27],
-            "type": "bar"
-          }
-        ];
+        var data = [testdata];
         var layout = {
           autosize: false,
           width: 400,
