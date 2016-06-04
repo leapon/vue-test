@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import store from './vuex/store'
+import BarplotTest from './components/BarplotTest.vue'
 import Barplot from './components/Barplot.vue'
 import Scatterplot from './components/Scatterplot.vue'
 
@@ -33,7 +34,7 @@ new Vue({
     }]
   },
   components: {
-    Barplot
+    BarplotTest
   }
 });
 
