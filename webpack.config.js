@@ -6,7 +6,8 @@ module.exports = {
     build: ['./src/main.js'],
     explorer: ['./src/explorer.js'],
     directive: ['./src/directive.js'],
-    plot: ['./src/plot.js']
+    plot: ['./src/plot.js'],
+    component1: ['./src/component1.js']
   },
   output: {
     path: './dist',
