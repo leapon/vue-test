@@ -6,6 +6,12 @@ import Barplot from './components/Barplot.vue'
 import Piechart from './components/Piechart.vue'
 import Scatterplot from './components/Scatterplot.vue'
 import Timeplot from './components/Timeplot.vue'
+import Histogramplot from './components/Histogramplot.vue'
+
+var randomdata = [];
+for (var i = 0; i < 500; i ++) {
+	randomdata[i] = Math.random();
+}
 
 var layout = {
   width: 360,
@@ -27,6 +33,9 @@ var timedata = {
   x: ['2013-10-04', '2013-11-04', '2013-12-04', '2014-01-01', '2014-02-20'],
   y: [1, 3, 6, 12, 9]
 };
+var histogramdata = {
+  x: randomdata
+};
 
 var errordata1 = [{
   x: [0, 1, 2],
@@ -38,7 +47,6 @@ var errordata1 = [{
   },
   type: 'scatter'
 }];
-
 var trace1 = {
   x: ['Trial 1', 'Trial 2', 'Trial 3'],
   y: [3, 6, 4],
@@ -98,13 +106,15 @@ new Vue({
     categorydata: categorydata,
     piedata: piedata,
     scatterdata: scatterdata,
-    timedata: timedata
+    timedata: timedata,
+    histogramdata: histogramdata
   },
   components: {
     Barplot,
     Piechart,
     Scatterplot,
-    Timeplot
+    Timeplot,
+    Histogramplot
   }
 });
 
