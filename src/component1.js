@@ -27,13 +27,12 @@ new Vue({
             'nickname',
             'email',
             'birthdate',
-            'gender'
-            //'__actions'
+            'gender',
+            '__actions'
         ],
         itemActions: [
-            { name: 'view-item', label: '', icon: 'zoom icon', class: 'ui teal button' },
-            { name: 'edit-item', label: '', icon: 'edit icon', class: 'ui orange button'},
-            { name: 'delete-item', label: '', icon: 'delete icon', class: 'ui red button' }
+            { name: 'view-item', label: '', icon: 'glyphicon glyphicon-eye-open', class: 'btn btn-default' },
+            { name: 'edit-item', label: '', icon: 'glyphicon glyphicon-pencil', class: 'btn btn-default'}
         ]
     },
     methods: {
