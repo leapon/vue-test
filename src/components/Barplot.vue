@@ -5,17 +5,11 @@
 </template>
 
 <script>
-function parseJSON(input) {
-  var result = null;
-  if(typeof input === 'string') {
-    try {
-      result = JSON.parse(input);
-    } catch (e) {}
-  } else {
-    result = input;
-  }
-  return result;
-}
+var defaultLayout = {
+  autosize: false,
+  width: 360,
+  height: 320
+};
 
 export default {
   props: ['label', 'data', 'layout'],
@@ -26,28 +20,17 @@ export default {
       params: ['data', 'layout'],
       bind: function () {
         var self = this;
-        var data = parseJSON(this.params.data) || [];
-        var layout = parseJSON(this.params.layout) || {
-          autosize: false,
-          width: 400,
-          height: 420
-        };
+        var data = this.params.data || {};
         data.type = 'bar';
-        console.log('>>> data:', data);
-        Plotly.plot(this.el, data, layout, { displayModeBar:false });
+        var layout = this.params.layout || defaultLayout;
+        Plotly.plot(this.el, [data], layout, { displayModeBar:false });
       }
     }
   },
   data () {
     return {
     }
-  },
-  activate: function (done) {
-    //console.log('>>> activate Barplot component');
-    //console.log('>>> label:', this.label);
-    //console.log('>>> data:', this.$get('data'));
-    done();
-  },
+  }
 }
 </script>
 
