@@ -19,6 +19,7 @@
         </div>
       </div>
       <div class="row">
+
         <div class="col-md-4" id="plot1">
           <br/>
           <barplot
@@ -45,9 +46,15 @@
             :layout='{ "width":360, "height":360 }'
           ></barplot>
         </div>
+
         <div class="col-md-4" id="plot2">
           <br/>
+          <scatterplot
+            :data=scatterdata
+            :layout=layout
+          ></scatterplot>
         </div>
+
         <div class="col-md-4" id="plot3">
           <br/>
         </div>
