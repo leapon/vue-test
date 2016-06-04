@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import store from './vuex/store'
 import BarplotTest from './components/BarplotTest.vue'
+import Plot from './components/Plot.vue'
 import Barplot from './components/Barplot.vue'
 import Piechart from './components/Piechart.vue'
 import Scatterplot from './components/Scatterplot.vue'
@@ -25,6 +26,46 @@ var scatterdata = {
 var timedata = {
   x: ['2013-10-04', '2013-11-04', '2013-12-04', '2014-01-01', '2014-02-20'],
   y: [1, 3, 6, 12, 9]
+};
+
+var errordata1 = [{
+  x: [0, 1, 2],
+  y: [6, 10, 2],
+  error_y: {
+    type: 'data',
+    array: [1, 2, 3],
+    visible: true
+  },
+  type: 'scatter'
+}];
+
+var trace1 = {
+  x: ['Trial 1', 'Trial 2', 'Trial 3'],
+  y: [3, 6, 4],
+  name: 'Control',
+  error_y: {
+    type: 'data',
+    array: [1, 0.5, 1.5],
+    visible: true
+  },
+  type: 'bar'
+};
+var trace2 = {
+  x: ['Trial 1', 'Trial 2', 'Trial 3'],
+  y: [4, 7, 3],
+  name: 'Experimental',
+  error_y: {
+    type: 'data',
+    array: [0.5, 1, 2],
+    visible: true
+  },
+  type: 'bar'
+};
+var errordata2 = [trace1, trace2];
+var grouplayout = {
+  barmode: 'group',
+  width: 360,
+  height: 320
 };
 
 new Vue({
@@ -64,5 +105,19 @@ new Vue({
     Piechart,
     Scatterplot,
     Timeplot
+  }
+});
+
+new Vue({
+  el: '#plot3',
+  store,
+  data: {
+    layout: layout,
+    grouplayout: grouplayout,
+    errordata1: errordata1,
+    errordata2: errordata2
+  },
+  components: {
+    Plot
   }
 });
