@@ -4,6 +4,7 @@ import BarplotTest from './components/BarplotTest.vue'
 import Barplot from './components/Barplot.vue'
 import Piechart from './components/Piechart.vue'
 import Scatterplot from './components/Scatterplot.vue'
+import Timeplot from './components/Timeplot.vue'
 
 var layout = {
   width: 360,
@@ -20,6 +21,10 @@ var piedata = {
 var scatterdata = {
   x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
   y: [0, 3, 4, 5, 4, 6, 9, 11, 12]
+};
+var timedata = {
+  x: ['2013-10-04', '2013-11-04', '2013-12-04', '2014-01-01', '2014-02-20'],
+  y: [1, 3, 6, 12, 9]
 };
 
 new Vue({
@@ -51,11 +56,13 @@ new Vue({
     layout: layout,
     categorydata: categorydata,
     piedata: piedata,
-    scatterdata: scatterdata
+    scatterdata: scatterdata,
+    timedata: timedata
   },
   components: {
     Barplot,
     Piechart,
-    Scatterplot
+    Scatterplot,
+    Timeplot
   }
 });
