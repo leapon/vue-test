@@ -20,15 +20,15 @@ console.log('in component1 page');
 
 // vue-table example
 new Vue({
-    el: '#app',
+    el: '#column1',
     data: {
         columns: [
             'name',
             'nickname',
             'email',
             'birthdate',
-            'gender',
-            '__actions'
+            'gender'
+            //'__actions'
         ],
         itemActions: [
             { name: 'view-item', label: '', icon: 'zoom icon', class: 'ui teal button' },
@@ -55,7 +55,7 @@ new Vue({
 })
 
 new Vue({
-  el: '#column1',
+  el: '#column2',
   store,
   data: {
   },
