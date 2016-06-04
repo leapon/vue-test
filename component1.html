@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>vue test</title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/sweetalert/sweetalert.css">
     <style>
     </style>
     <script src="lib/jquery/jquery.min.js"></script>
@@ -15,9 +16,40 @@
         <div class="col-md-12">
           <h4><a href="/">Home</a></h4>
           <p>Vue Component 1</p>
-          <br/>
         </div>
       </div>
+
+      <div class="row">
+        <div id="app" class="ui vertical stripe segment">
+          <div class="ui container">
+            <div class="ui basic segment">
+              <h3 class="ui header">vue-table - user list</h3>
+              <br/>
+              <vuetable
+                api-url="http://vuetable.ratiw.net/api/users"
+                :fields="columns"
+                :item-actions="itemActions"
+                pagination-path=""
+                :fields="fields"
+                :sort-order="sortOrder"
+                table-class="table table-bordered table-striped table-hover"
+                ascending-icon="glyphicon glyphicon-chevron-up"
+                descending-icon="glyphicon glyphicon-chevron-down"
+                pagination-class=""
+                pagination-info-class=""
+                pagination-component-class=""
+                :pagination-component="paginationComponent"
+                :append-params="moreParams"
+                :per-page="perPage"
+                wrapper-class="vuetable-wrapper"
+                table-wrapper=".vuetable-wrapper"
+                loading-class="loading"
+              ></vuetable>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="row">
 
         <div class="col-md-4" id="column1">
