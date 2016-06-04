@@ -41,9 +41,8 @@ export default {
     }
   },
   activate: function (done) {
-    console.log('>>>', this.$vm);
     //console.log('>>> activate Barplot component');
-    //console.log('>>> label:', this.$get('label'));
+    //console.log('>>> label:', this.label);
     //console.log('>>> data:', this.$get('data'));
     done();
   },

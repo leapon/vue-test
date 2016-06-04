@@ -13,8 +13,6 @@ export default {
       twoWay: true,
       params: ['data'],
       bind: function () {
-        var self = this;
-        console.log('>>> bind this.params.data:', this.params.data);
         // draw plot using plotly
         var data = [
           {
@@ -35,12 +33,6 @@ export default {
   data () {
     return {
     }
-  },
-  activate: function (done) {
-    console.log('>>> activate Barplot component');
-    console.log('>>> label:', this.$get('label'));
-    console.log('>>> data:', this.$get('data'));
-    done();
   },
 }
 </script>
