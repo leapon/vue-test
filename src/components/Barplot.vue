@@ -32,6 +32,8 @@ export default {
           width: 400,
           height: 420
         };
+        data.type = 'bar';
+        console.log('>>> data:', data);
         Plotly.plot(this.el, data, layout, { displayModeBar:false });
       }
     }

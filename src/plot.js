@@ -47,6 +47,7 @@ new Vue({
     scatterdata: scatterdata
   },
   components: {
+    Barplot,
     Scatterplot
   }
 });
