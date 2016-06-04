@@ -32,6 +32,7 @@ export default {
           width: 400,
           height: 420
         };
+        data.type = 'scatter';
         Plotly.plot(this.el, data, layout, { displayModeBar:false });
       }
     }
