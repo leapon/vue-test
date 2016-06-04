@@ -2,6 +2,7 @@ import Vue from 'vue'
 import store from './vuex/store'
 import BarplotTest from './components/BarplotTest.vue'
 import Barplot from './components/Barplot.vue'
+import Piechart from './components/Piechart.vue'
 import Scatterplot from './components/Scatterplot.vue'
 
 var layout = {
@@ -11,6 +12,10 @@ var layout = {
 var categorydata = {
   x: ["Apple", "Orange"],
   y: [23, 18]
+};
+var piedata = {
+  values: [19, 26, 55],
+  labels: ['Residential', 'Non-Residential', 'Utility']
 };
 var scatterdata = {
   x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
@@ -45,10 +50,12 @@ new Vue({
   data: {
     layout: layout,
     categorydata: categorydata,
+    piedata: piedata,
     scatterdata: scatterdata
   },
   components: {
     Barplot,
+    Piechart,
     Scatterplot
   }
 });
