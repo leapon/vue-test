@@ -32,26 +32,7 @@
         <div class="col-md-8" id="main_panel">
           <h4>User List</h4>
           <br/>
-          <vuetable
-            api-url="http://vuetable.ratiw.net/api/users"
-            :fields="columns"
-            :item-actions="itemActions"
-            pagination-path=""
-            :fields="fields"
-            :sort-order="sortOrder"
-            table-class="table table-bordered table-striped table-hover"
-            ascending-icon="glyphicon glyphicon-chevron-up"
-            descending-icon="glyphicon glyphicon-chevron-down"
-            pagination-class=""
-            pagination-info-class=""
-            pagination-component-class=""
-            :pagination-component="paginationComponent"
-            :append-params="moreParams"
-            :per-page="perPage"
-            wrapper-class="vuetable-wrapper"
-            table-wrapper=".vuetable-wrapper"
-            loading-class="loading"
-          ></vuetable>
+          <user-table :dataitems=dataitems></user-table>
         </div>
 
       </div>

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import store from './vuex/store'
 import FilterPane from './components/FilterPane.vue'
+import UserTable from './components/UserTable.vue'
 
 var VueResource = require('vue-resource');
 Vue.use(VueResource);
@@ -56,35 +57,18 @@ var vmSide = new Vue({
 });
 
 var vmMain = new Vue({
-    el: '#main_panel',
-    data: {
-        columns: [
-            'name',
-            'nickname',
-            'email',
-            'birthdate',
-            'gender',
-            '__actions'
-        ],
-        itemActions: [
-            { name: 'view-item', label: '', icon: 'glyphicon glyphicon-eye-open', class: 'btn btn-default' },
-            { name: 'edit-item', label: '', icon: 'glyphicon glyphicon-pencil', class: 'btn btn-default'}
-        ]
-    },
-    methods: {
-        viewProfile: function(id) {
-            console.log('view profile with id:', id)
-        }
-    },
-    events: {
-        'vuetable:action': function(action, data) {
-            console.log('vuetable:action', action, data)
-            if (action == 'view-item') {
-                this.viewProfile(data.id)
-            }
-        },
-        'vuetable:load-error': function(response) {
-            console.log('Load Error: ', response)
-        }
-    }
+  el: '#main_panel',
+  store,
+  data: {
+    dataitems:[
+        { id:1, name:"jack" },
+        { id:2, name:"mary" },
+        { id:3, name:"zack" },
+        { id:4, name:"alex" },
+        { id:5, name:"cathy" }
+    ]
+  },
+  components: {
+    UserTable
+  }
 });
