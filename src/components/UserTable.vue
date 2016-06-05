@@ -1,14 +1,12 @@
 <template>
-  <p>{{ testmsg }}</p>
-  <hr/>
-  <p>{{ filter|json }}</p>
+  <p>{{ filter2 }}</p>
   <hr/>
   <div v-for="dataitem in dataitems">
     <p>{{ dataitem.id }} - {{ dataitem.name }}</p>
   </div>
   <hr/>
   <vuetable
-    api-url="./lib/data/vuetable-example-users.json"
+    :api-url="dataurl"
     :fields="columns"
     :item-actions="itemActions"
     pagination-path=""
@@ -33,7 +31,6 @@ export default {
   props: ['dataitems'],
   data () {
     return {
-      testmsg: 'user table',
       columns: [
           'name',
           'nickname',
@@ -42,6 +39,14 @@ export default {
           'gender',
           '__actions'
       ]
+    }
+  },
+  computed: {
+    filter2: function() {
+      return JSON.stringify(this.filter) + '-2';
+    },
+    dataurl: function() {
+      return './lib/data/vuetable-example-users.json' + '?a=1&filter=' + JSON.stringify(this.filter)
     }
   },
   vuex: {
