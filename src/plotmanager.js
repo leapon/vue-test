@@ -9,9 +9,9 @@ Vue.use(VueResource);
 console.log('in plot manager page');
 
 var values = [
-  { name: 'MD' },
-  { name: 'VA' },
-  { name: 'DC' }
+  { name: 'Male' },
+  { name: 'Female' },
+  { name: 'Other' }
 ];
 
 var vmSide = new Vue({
@@ -23,19 +23,34 @@ var vmSide = new Vue({
         name: 'gender',
         label: 'Gender',
         type: 'one',
-        values: values
+        values: [
+          { name: 'Male' },
+          { name: 'Female' },
+          { name: 'Other' }
+        ]
       },
       {
-        name: 'race',
-        label: 'Race',
+        name: 'ethinicity',
+        label: 'Ethinicity',
         type: 'multi',
-        values: values
+        values: [
+          { name: 'African' },
+          { name: 'Asian' },
+          { name: 'Hispanic' },
+          { name: 'Native' },
+          { name: 'White' }
+        ]
       },
       {
         name: 'species',
         label: 'Species',
         type: 'multi',
-        values: values
+        values: [
+          { name: 'mouse' },
+          { name: 'rat' },
+          { name: 'monkey' },
+          { name: 'homo sapien' }
+        ]
       }
     ]
   },
