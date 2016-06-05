@@ -5,13 +5,21 @@
     <p>{{ dataitem.id }} - {{ dataitem.name }}</p>
   </div>
   <hr/>
+  <barplot :data="categorydata"></barplot>
 </template>
 
 <script>
+import Multiselect from 'vue-multiselect'
+import Barplot from './Barplot.vue'
+
 export default {
   props: ['dataitems'],
   data () {
     return {
+      categorydata: {
+        x: ["Pear", "Orange"],
+        y: [42, 18]
+      }
     }
   },
   computed: {
@@ -32,6 +40,7 @@ export default {
     done();
   },
   components: {
+    Barplot
   }
 }
 </script>
