@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue test</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/sweetalert/sweetalert.css">
+    <style>
+    </style>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h4><a href="/">Home</a></h4>
+          <p>Plot Manager</p>
+          <hr/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4" id="side_panel">
+          <h4>Filter List</h4>
+          <br/>
+          <filter-pane :fields=fields></filter-pane>
+        </div>
+        <div class="col-md-8" id="main_panel">
+          <h4>Result Plot</h4>
+          <br/>
+        </div>
+      </div>
+
+    </div>
+    <script src="dist/plotmanager.js"></script>
+  </body>
+</html>
