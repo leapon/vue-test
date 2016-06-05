@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue test</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/sweetalert/sweetalert.css">
+    <style>
+    </style>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4><a href="/">Home</a></h4>
+          <p>Vue Component 1</p>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-8" id="column1">
+          <br/>
+          <div>
+            <h4>List of Users</h4>
+            <p>vue-table</p>
+            <br/>
+            <vuetable
+              api-url="http://vuetable.ratiw.net/api/users"
+              :fields="columns"
+              :item-actions="itemActions"
+              pagination-path=""
+              :fields="fields"
+              :sort-order="sortOrder"
+              table-class="table table-bordered table-striped table-hover"
+              ascending-icon="glyphicon glyphicon-chevron-up"
+              descending-icon="glyphicon glyphicon-chevron-down"
+              pagination-class=""
+              pagination-info-class=""
+              pagination-component-class=""
+              :pagination-component="paginationComponent"
+              :append-params="moreParams"
+              :per-page="perPage"
+              wrapper-class="vuetable-wrapper"
+              table-wrapper=".vuetable-wrapper"
+              loading-class="loading"
+            ></vuetable>
+          </div>
+        </div>
+
+        <div class="col-md-4" id="column2">
+          <br/>
+        </div>
+      </div>
+    </div>
+    <script src="dist/component1.js"></script>
+  </body>
+</html>
