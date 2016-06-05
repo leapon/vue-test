@@ -1,10 +1,6 @@
 <template>
   <p>{{ filter2 }}</p>
   <hr/>
-  <div v-for="dataitem in dataitems">
-    <p>{{ dataitem.id }} - {{ dataitem.name }}</p>
-  </div>
-  <hr/>
   <barplot :data="categorydata"></barplot>
 </template>
 
