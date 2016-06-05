@@ -12,14 +12,6 @@ export default {
   props: ['dataitems'],
   data () {
     return {
-      columns: [
-          'name',
-          'nickname',
-          'email',
-          'birthdate',
-          'gender',
-          '__actions'
-      ]
     }
   },
   computed: {
