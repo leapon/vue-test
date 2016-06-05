@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import store from './vuex/store'
+import FilterPane from './components/FilterPane.vue'
 
 var VueResource = require('vue-resource');
 Vue.use(VueResource);
@@ -18,17 +19,44 @@ Vue.component('vuetable-pagination-bootstrap', VuetablePaginationBootstrap)
 
 console.log('in user manager page');
 
+var values = [
+  { name: 'MD' },
+  { name: 'VA' },
+  { name: 'DC' }
+];
+
 var vmSide = new Vue({
-  el: '#side',
+  el: '#side_panel',
   store,
   data: {
+    fields: [
+      {
+        name: 'gender',
+        label: 'Gender',
+        type: 'one',
+        values: values
+      },
+      {
+        name: 'race',
+        label: 'Race',
+        type: 'multi',
+        values: values
+      },
+      {
+        name: 'species',
+        label: 'Species',
+        type: 'multi',
+        values: values
+      }
+    ]
   },
   components: {
+    FilterPane
   }
 });
 
 var vmMain = new Vue({
-    el: '#main',
+    el: '#main_panel',
     data: {
         columns: [
             'name',
