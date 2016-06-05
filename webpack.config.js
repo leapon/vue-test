@@ -9,7 +9,8 @@ module.exports = {
     plot: ['./src/plot.js'],
     component1: ['./src/component1.js'],
     component2: ['./src/component2.js'],
-    component3: ['./src/component3.js']
+    component3: ['./src/component3.js'],
+    usermanager: ['./src/usermanager.js']
   },
   output: {
     path: './dist',

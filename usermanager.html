@@ -12,49 +12,49 @@
   </head>
   <body>
     <div class="container">
+      
       <div class="row">
         <div class="col-md-12">
           <h4><a href="/">Home</a></h4>
-          <p>Vue Component 1</p>
+          <p>User Manager</p>
+          <hr/>
         </div>
       </div>
 
       <div class="row">
 
-        <div class="col-md-8" id="column1">
+        <div class="col-md-4" id="side">
+          <h4>Filter List</h4>
           <br/>
-          <div>
-            <h4>List of Users</h4>
-            <p>vue-table</p>
-            <br/>
-            <vuetable
-              api-url="http://vuetable.ratiw.net/api/users"
-              :fields="columns"
-              :item-actions="itemActions"
-              pagination-path=""
-              :fields="fields"
-              :sort-order="sortOrder"
-              table-class="table table-bordered table-striped table-hover"
-              ascending-icon="glyphicon glyphicon-chevron-up"
-              descending-icon="glyphicon glyphicon-chevron-down"
-              pagination-class=""
-              pagination-info-class=""
-              pagination-component-class=""
-              :pagination-component="paginationComponent"
-              :append-params="moreParams"
-              :per-page="perPage"
-              wrapper-class="vuetable-wrapper"
-              table-wrapper=".vuetable-wrapper"
-              loading-class="loading"
-            ></vuetable>
-          </div>
+        </div>
+        
+        <div class="col-md-8" id="main">
+          <h4>User List</h4>
+          <br/>
+          <vuetable
+            api-url="http://vuetable.ratiw.net/api/users"
+            :fields="columns"
+            :item-actions="itemActions"
+            pagination-path=""
+            :fields="fields"
+            :sort-order="sortOrder"
+            table-class="table table-bordered table-striped table-hover"
+            ascending-icon="glyphicon glyphicon-chevron-up"
+            descending-icon="glyphicon glyphicon-chevron-down"
+            pagination-class=""
+            pagination-info-class=""
+            pagination-component-class=""
+            :pagination-component="paginationComponent"
+            :append-params="moreParams"
+            :per-page="perPage"
+            wrapper-class="vuetable-wrapper"
+            table-wrapper=".vuetable-wrapper"
+            loading-class="loading"
+          ></vuetable>
         </div>
 
-        <div class="col-md-4" id="column2">
-          <br/>
-        </div>
       </div>
     </div>
-    <script src="dist/component1.js"></script>
+    <script src="dist/usermanager.js"></script>
   </body>
 </html>
