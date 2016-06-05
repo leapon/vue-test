@@ -1,7 +1,7 @@
 <template>
   <p>{{ filter2 }}</p>
   <hr/>
-  <barplot :data="categorydata"></barplot>
+  <barplot :data="species_data"></barplot>
 </template>
 
 <script>
@@ -24,6 +24,13 @@ export default {
     },
     dataurl: function() {
       return './lib/data/vuetable-example-users.json' + '?a=1&filter=' + JSON.stringify(this.filter)
+    },
+    species_data: function() {
+      var data = {
+        x: ["Melon", "Grape"],
+        y: [12, 15]
+      };
+      return data;
     }
   },
   vuex: {
