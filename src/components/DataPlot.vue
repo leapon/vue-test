@@ -1,5 +1,6 @@
 <template>
   <p>{{ filter2 }}</p>
+  <p>{{ species_data|json }}</p>
   <hr/>
   <barplot :data="species_data"></barplot>
 </template>
@@ -27,9 +28,17 @@ export default {
     },
     species_data: function() {
       var data = {
-        x: ["Melon", "Grape"],
+        x: ["A", "B"],
         y: [12, 15]
       };
+      if (this.filter && this.filter.species) {
+        data = { x:[], y:[] };
+        for (var species of this.filter.species) {
+          data.x.push(species.name);
+          data.y.push(Math.floor(Math.random() * 100));
+        }
+      }
+      console.log('>>> data:', data);
       return data;
     }
   },

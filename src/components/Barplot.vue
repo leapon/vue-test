@@ -1,6 +1,6 @@
 <template>
   <div class="barplot-container">
-    <div v-barplot :data=data :layout=layout></div>
+    <div v-barplot="data" :layout=layout></div>
   </div>
 </template>
 
@@ -17,13 +17,11 @@ export default {
   directives: {
     barplot: {
       twoWay: true,
-      params: ['data', 'layout'],
-      bind: function () {
-        var self = this;
-        var data = this.params.data || {};
-        data.type = 'bar';
+      params: ['layout'],
+      update: function (data) {
+        data.type = data.type || 'bar';
         var layout = this.params.layout || defaultLayout;
-        Plotly.plot(this.el, [data], layout, { displayModeBar:false });
+        Plotly.newPlot(this.el, [data], layout, { displayModeBar:false });
       }
     }
   },
