@@ -1,6 +1,6 @@
 <template>
-  <p>{{ filter2 }}</p>
-  <p>{{ species_data|json }}</p>
+  <p>species data: {{ species_data|json }}</p>
+  <p>data url: {{ dataurl }}</p>
   <hr/>
   <barplot :data="species_data"></barplot>
 </template>
@@ -24,21 +24,17 @@ export default {
       return JSON.stringify(this.filter) + '-2';
     },
     dataurl: function() {
-      return './lib/data/vuetable-example-users.json' + '?a=1&filter=' + JSON.stringify(this.filter)
+      return './lib/data/vuetable-example-users.json' + '?filter=' + JSON.stringify(this.filter)
     },
     species_data: function() {
-      var data = {
-        x: ["A", "B"],
-        y: [12, 15]
-      };
+      var data = { x:[], y:[] };
       if (this.filter && this.filter.species) {
-        data = { x:[], y:[] };
+
         for (var species of this.filter.species) {
           data.x.push(species.name);
           data.y.push(Math.floor(Math.random() * 100));
         }
       }
-      console.log('>>> data:', data);
       return data;
     }
   },
