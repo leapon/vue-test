@@ -1,6 +1,6 @@
 <template>
   <div class="plot-container">
-    <div v-plot :data=data :layout=layout></div>
+    <div v-plot="data" :layout=layout></div>
   </div>
 </template>
 
@@ -17,10 +17,8 @@ export default {
   directives: {
     plot: {
       twoWay: true,
-      params: ['data', 'layout'],
-      bind: function () {
-        var self = this;
-        var data = this.params.data || [];
+      params: ['layout'],
+      update: function (data) {
         var layout = this.params.layout || defaultLayout;
         Plotly.plot(this.el, data, layout, { displayModeBar:false });
       }

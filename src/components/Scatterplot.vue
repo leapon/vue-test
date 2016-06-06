@@ -1,6 +1,6 @@
 <template>
   <div class="scatterplot-container">
-    <div v-scatterplot :data=data :layout=layout></div>
+    <div v-scatterplot="data" :layout=layout></div>
   </div>
 </template>
 
@@ -17,11 +17,9 @@ export default {
   directives: {
     scatterplot: {
       twoWay: true,
-      params: ['data', 'layout'],
-      bind: function () {
-        var self = this;
-        var data =this.params.data || {};
-        data.type = 'scatter';
+      params: ['layout'],
+      update: function (data) {
+        data.type = data.type || 'scatter';
         var layout = this.params.layout || defaultLayout;
         Plotly.plot(this.el, [data], layout, { displayModeBar:false });
       }
