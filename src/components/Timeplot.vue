@@ -1,6 +1,6 @@
 <template>
   <div class="timeplot-container">
-    <div v-timeplot :data=data :layout=layout></div>
+    <div v-timeplot="data" :layout=layout></div>
   </div>
 </template>
 
@@ -17,13 +17,11 @@ export default {
   directives: {
     timeplot: {
       twoWay: true,
-      params: ['data', 'layout'],
-      bind: function () {
-        var self = this;
-        var data =this.params.data || {};
-        data.type = 'scatter';
+      params: ['layout'],
+      update: function (data) {
+        data.type = data.type || 'scatter';
         var layout = this.params.layout || defaultLayout;
-        Plotly.plot(this.el, [data], layout, { displayModeBar:false });
+        Plotly.newPlot(this.el, [data], layout, { displayModeBar:false });
       }
     }
   },

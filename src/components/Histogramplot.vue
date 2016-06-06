@@ -1,6 +1,6 @@
 <template>
   <div class="histogramplot-container">
-    <div v-histogramplot :data=data :layout=layout></div>
+    <div v-histogramplot="data" :layout=layout></div>
   </div>
 </template>
 
@@ -17,11 +17,9 @@ export default {
   directives: {
     histogramplot: {
       twoWay: true,
-      params: ['data', 'layout'],
-      bind: function () {
-        var self = this;
-        var data = this.params.data || {};
-        data.type = 'histogram';
+      params: ['layout'],
+      update: function (data) {
+        data.type = data.type || 'histogram';
         var layout = this.params.layout || defaultLayout;
         Plotly.plot(this.el, [data], layout, { displayModeBar:false });
       }

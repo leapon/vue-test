@@ -1,6 +1,6 @@
 <template>
   <div class="piechart-container">
-    <div v-piechart :data=data :layout=layout></div>
+    <div v-piechart="data" :layout=layout></div>
   </div>
 </template>
 
@@ -17,13 +17,11 @@ export default {
   directives: {
     piechart: {
       twoWay: true,
-      params: ['data', 'layout'],
-      bind: function () {
-        var self = this;
-        var data = this.params.data || {};
-        data.type = 'pie';
+      params: ['layout'],
+      update: function (data) {
+        data.type = data.type || 'pie';
         var layout = this.params.layout || defaultLayout;
-        Plotly.plot(this.el, [data], layout, { displayModeBar:false });
+        Plotly.newPlot(this.el, [data], layout, { displayModeBar:false });
       }
     }
   },
