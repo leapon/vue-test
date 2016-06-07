@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import jquery from 'jquery'
 
 Vue.use(Vuex)
 
@@ -7,7 +8,8 @@ Vue.use(Vuex)
 const state = {
   count: 0,
   filter: {},
-  fields: []
+  fields: [],
+  users: []
 }
 
 // define possible mutations
@@ -24,6 +26,20 @@ const mutations = {
     for (var p in filter) {
         state.fields.push(p);
     }
+    /*
+    // async call to get users
+    var url = '/lib/data/vuetable-example-users.json';
+    jquery.get(url, function(data) {
+      console.log('>>> data:', data);
+      state.dispatch({
+        type: SETUSERS,
+        payload: data.data
+      });
+    });
+    */
+  },
+  SETUSERS(state, users) {
+    state.users = users;
   }
 }
 

@@ -2,6 +2,7 @@
   <p>species data: {{ species_data|json }}</p>
   <p>fields: {{ fields|json }}</p>
   <p>data url: {{ dataurl }}</p>
+  <p>users #: {{ users.length }}</p>
   <hr/>
   <barplot :data="species_data"></barplot>
 </template>
@@ -41,7 +42,8 @@ export default {
   vuex: {
     getters: {
       filter: state => state.filter,
-      fields: state => state.fields
+      fields: state => state.fields,
+      users: state => state.users
     }
   },
   activate: function (done) {
