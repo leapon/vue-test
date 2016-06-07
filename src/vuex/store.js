@@ -26,17 +26,6 @@ const mutations = {
     for (var p in filter) {
         state.fields.push(p);
     }
-    /*
-    // async call to get users
-    var url = '/lib/data/vuetable-example-users.json';
-    jquery.get(url, function(data) {
-      console.log('>>> data:', data);
-      state.dispatch({
-        type: SETUSERS,
-        payload: data.data
-      });
-    });
-    */
   },
   SETUSERS(state, users) {
     state.users = users;
