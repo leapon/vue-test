@@ -1,5 +1,6 @@
 <template>
   <p>species data: {{ species_data|json }}</p>
+  <p>fields: {{ fields|json }}</p>
   <p>data url: {{ dataurl }}</p>
   <hr/>
   <barplot :data="species_data"></barplot>
@@ -29,7 +30,6 @@ export default {
     species_data: function() {
       var data = { x:[], y:[] };
       if (this.filter && this.filter.species) {
-
         for (var species of this.filter.species) {
           data.x.push(species.name);
           data.y.push(Math.floor(Math.random() * 100));
@@ -40,7 +40,8 @@ export default {
   },
   vuex: {
     getters: {
-      filter: state => state.filter
+      filter: state => state.filter,
+      fields: state => state.fields
     }
   },
   activate: function (done) {

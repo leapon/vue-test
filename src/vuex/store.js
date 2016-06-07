@@ -6,7 +6,8 @@ Vue.use(Vuex)
 // app initial state
 const state = {
   count: 0,
-  filter: {}
+  filter: {},
+  fields: []
 }
 
 // define possible mutations
@@ -18,7 +19,11 @@ const mutations = {
     state.count--
   },
   SETFILTER (state, filter) {
-    state.filter = filter
+    state.filter = filter;
+    state.fields = [];
+    for (var p in filter) {
+        state.fields.push(p);
+    }
   }
 }
 
