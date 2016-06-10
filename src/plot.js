@@ -17,6 +17,11 @@ var layout = {
   width: 360,
   height: 320
 };
+var widelayout = {
+  width: 600,
+  height: 360
+};
+
 var categorydata = {
   x: ["Apple", "Orange"],
   y: [23, 18]
@@ -30,8 +35,9 @@ var scatterdata = {
   y: [0, 3, 4, 5, 4, 6, 9, 11, 12]
 };
 var timedata = {
-  x: ['2013-10-04', '2013-11-04', '2013-12-04', '2014-01-01', '2014-02-20'],
-  y: [1, 3, 6, 12, 9]
+  x: ['2013-10-04', '2013-11-04', '2013-12-04', '2014-01-01',
+      '2014-02-10', '2014-03-05', '2014-03-30', '2014-04-20'],
+  y: [1, 3, 6, 8, 9, 11, 9, 7]
 };
 var histogramdata = {
   x: randomdata
@@ -103,6 +109,7 @@ new Vue({
   store,
   data: {
     layout: layout,
+    widelayout: widelayout,
     categorydata: categorydata,
     piedata: piedata,
     scatterdata: scatterdata,
