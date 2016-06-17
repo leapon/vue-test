@@ -19,6 +19,7 @@
     "vue-resource": "^0.7.2",
     "vue-strap": "^1.0.11",
     "vue-table": "0.0.1",
+    "vueboot": "^0.4.5",
     "vuex": "^0.6.3"
   },
   "devDependencies": {
