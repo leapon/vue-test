@@ -32,6 +32,24 @@
     <mt-button type="primary">primary</mt-button>
     <mt-button type="danger">danger</mt-button>
   </div>
+  <br/>
+  <div>
+    <mt-range
+      :value.sync="rangeValue"
+      :min="10"
+      :max="90"
+      :step="10"
+      :bar-height="5">
+    </mt-range>
+  </div>
+  <br/>
+  <div>
+    <mt-range :value.sync="rangeValue">
+      <div slot="start">0</div>
+      <div slot="end">100</div>
+    </mt-range>
+  </div>
+  <br/>
 </template>
 
 <script>
@@ -40,7 +58,7 @@ import MintUI from 'mint-ui';
 Vue.use(MintUI);
 
 module.exports = {
-  props: ['label', 'value', 'value2', 'options'],
+  props: ['label', 'value', 'value2', 'rangeValue', 'options'],
   components: { MintUI },
   methods:{}
 }
