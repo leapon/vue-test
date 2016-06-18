@@ -12,7 +12,8 @@ module.exports = {
     component3: ['./src/component3.js'],
     usermanager: ['./src/usermanager.js'],
     plotmanager: ['./src/plotmanager.js'],
-    mint_ui: ['./src/mint_ui.js']
+    mint_ui: ['./src/mint_ui.js'],
+    vueboot: ['./src/vueboot.js']
   },
   output: {
     path: './dist',
