@@ -11,7 +11,8 @@ module.exports = {
     component2: ['./src/component2.js'],
     component3: ['./src/component3.js'],
     usermanager: ['./src/usermanager.js'],
-    plotmanager: ['./src/plotmanager.js']
+    plotmanager: ['./src/plotmanager.js'],
+    mint_ui: ['./src/mint_ui.js']
   },
   output: {
     path: './dist',
