@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import store from './vuex/store'
+import MintForm from './components/MintForm.vue'
 
 console.log('in mint_ui page');
 
@@ -9,5 +10,6 @@ new Vue({
   data: {
   },
   components: {
+    MintForm
   }
 });
