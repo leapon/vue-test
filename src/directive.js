@@ -3,6 +3,7 @@ import store from './vuex/store'
 import SimpleLabel from './components/SimpleLabel.vue'
 import SimpleLabel2 from './components/SimpleLabel2.vue'
 import BarplotPre from './components/BarplotPre.vue'
+import EditTable from './components/EditTable.vue'
 
 Vue.directive('my-directive', function (newValue, oldValue) {
   //console.log('>>> my-directive update:', newValue, oldValue);
@@ -12,11 +13,18 @@ new Vue({
   el: '#plot1',
   store,
   data: {
+    label: 'user table',
+    users: [
+      { name:'jack', age:20 },
+      { name:'mary', age:25 },
+      { name:'alex', age:22 }
+    ]
   },
   components: {
     SimpleLabel,
     SimpleLabel2,
-    BarplotPre
+    BarplotPre,
+    EditTable
   }
 })
 
