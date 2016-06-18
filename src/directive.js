@@ -3,7 +3,7 @@ import store from './vuex/store'
 import SimpleLabel from './components/SimpleLabel.vue'
 import SimpleLabel2 from './components/SimpleLabel2.vue'
 import BarplotPre from './components/BarplotPre.vue'
-import EditTable from './components/EditTable.vue'
+import EditTableTest from './components/EditTableTest.vue'
 
 Vue.directive('my-directive', function (newValue, oldValue) {
   //console.log('>>> my-directive update:', newValue, oldValue);
@@ -24,7 +24,7 @@ new Vue({
     SimpleLabel,
     SimpleLabel2,
     BarplotPre,
-    EditTable
+    EditTableTest
   }
 })
 
