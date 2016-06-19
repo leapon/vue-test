@@ -15,13 +15,25 @@
     </td>
   </tr>
   </table>
+
+  <div class="table table-bordered">
+    <smart-sheet-row :columns="columns"></smart-sheet-row>
+    <smart-sheet-row :columns="columns"></smart-sheet-row>
+    <smart-sheet-row :columns="columns"></smart-sheet-row>
+  </div>
+
 </template>
 
 <script>
+import SmartSheetRow from './SmartSheetRow.vue'
+
 export default {
   props: ['label', 'columns', 'items'],
   data: function() {
     return {};
+  },
+  components: {
+    SmartSheetRow
   },
   computed: {
     hash1: function() {
