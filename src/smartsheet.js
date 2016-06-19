@@ -26,7 +26,6 @@ var sheet1 = new Vue({
 $('#btnSheet1').click(showSheet1Info);
 
 function showSheet1Info() {
-  console.log('>>> showSheet1Info:', sheet1.$get('columns'), sheet1.$get('sheetdata'));
-    console.log('>>> showSheet1Info:', sheet1.getData());
+  console.log('>>> showSheet1Info:', sheet1.$get('columns'));
   $('#info1').text('showSheet1Info');
 }
