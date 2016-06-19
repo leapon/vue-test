@@ -16,11 +16,30 @@ Vue.component('vuetable-pagination', VuetablePagination)
 Vue.component('vuetable-pagination-dropdown', VuetablePaginationDropdown)
 Vue.component('vuetable-pagination-bootstrap', VuetablePaginationBootstrap)
 
+// vue-tables
+var VueTables = require('vue-tables');
+var options = {
+  compileTemplates: true,
+  //highlightMatches: true,
+  //pagination: {
+  // dropdown:true
+  // chunk:5
+  // },
+  filterByColumn: true,
+  texts: {
+    filter: "Search:"
+  },
+  datepickerOptions: {
+    showDropdowns: true
+  }
+};
+Vue.use(VueTables.client, options);
+
 console.log('in component1 page');
 
 // vue-table example
 new Vue({
-    el: '#column1',
+    el: '#row1',
     data: {
         columns: [
             'name',
@@ -54,10 +73,27 @@ new Vue({
 })
 
 new Vue({
-  el: '#column2',
+  el: '#row2',
   store,
   data: {
-  },
-  components: {
+    columns: ['name', 'age'],
+    tableData: [{
+      name: 'Jack',
+      age: 18
+    }, {
+      name: 'Alex',
+      age: 19
+    }, {
+      name: 'Becky',
+      age: 21
+    }],
+    options: {
+      headings: {
+        name: 'Name',
+        age: 'Age',
+        edit: 'Edit',
+        delete: 'Delete'
+      }
+    }
   }
 });

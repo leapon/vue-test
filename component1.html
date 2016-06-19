@@ -21,10 +21,10 @@
 
       <div class="row">
 
-        <div class="col-md-8" id="column1">
+        <div class="col-md-8" id="row1">
           <br/>
           <div>
-            <h4>List of Users</h4>
+            <h4>Table Test 1</h4>
             <p>vue-table</p>
             <br/>
             <vuetable
@@ -49,9 +49,15 @@
             ></vuetable>
           </div>
         </div>
-
-        <div class="col-md-4" id="column2">
-          <br/>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-md-8" id="row2">
+            <h4>Table Test 2</h4>
+            <p>vue-tables</p>
+            <br/>
+            <v-client-table :data="tableData" :columns="columns" :options="options"></v-client-table>
+          </div>
         </div>
       </div>
     </div>
