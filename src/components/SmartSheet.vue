@@ -18,8 +18,20 @@ export default {
   data: function() {
     return {};
   },
-  methods:{
-  }
+  methods: {
+    apply: function () {
+
+      // collect filter values from child components
+      var userdata = {};
+      for (let child of this.$children) {
+        userdata[child.$get('name')] = child.$get('value');
+      }
+      console.log('>>> apply - userdata:', userdata);
+      //this.$dispatch('filter-change', userdata);
+      setfilter(this.$store, userdata);
+      
+    }
+  },
 }
 </script>
 

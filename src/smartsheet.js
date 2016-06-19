@@ -2,7 +2,7 @@ import Vue from 'vue'
 import store from './vuex/store'
 import SmartSheet from './components/SmartSheet.vue'
 
-new Vue({
+var sheet1 = new Vue({
   el: '#sheet1',
   store,
   data: {
@@ -21,3 +21,10 @@ new Vue({
     SmartSheet
   }
 });
+
+$('#btnSheet1').click(showSheet1Info);
+
+function showSheet1Info() {
+  console.log('>>> showSheet1Info');
+  $('#info1').text('showSheet1Info');
+}
