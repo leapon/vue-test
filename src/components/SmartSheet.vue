@@ -6,7 +6,7 @@
   </tr>
   <tr v-for="item in items">
     <td>
-      {{ item.name }}
+      <input class="smartsheet-input-cell" value="{{ item.name }}" />
     </td>
     <td>
       {{ item.value }}
@@ -27,4 +27,14 @@ export default {
 </script>
 
 <style>
+.smartsheet-input-cell {
+  width: 100%;
+  background: transparent;
+  font-size: 13px;
+  box-sizing: border-box;
+  border: solid 0px #fff;
+}
+.smartsheet-input-cell:focus {
+  outline: none;
+}
 </style>
