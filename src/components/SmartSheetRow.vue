@@ -21,13 +21,13 @@ export default {
 
 <style>
 .table-body-row {
-  border: solid 1px #f2f2f2;
-  height: 40px;
-  padding: 5px;
+  /* border: solid 1px #f2f2f2; */
+  /* height: 40px; */
   clear: both;
 }
 .table-body-cell {
   float: left;
+  padding: 5px;
   border: solid 1px #f2f2f2;
 }
 .smartsheet-input-cell {

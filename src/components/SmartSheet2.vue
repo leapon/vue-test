@@ -1,29 +1,23 @@
 <template>
   <p>{{ label }}</p>
-  <table class="table table-bordered table-striped"">
-    <tr>
-      <th v-for="column in columns">{{ column.display }}</th>
-    </tr>
-    <tr v-for="item in items">
-      <td v-for="column in columns">
-        <template v-if="column.edit">
-          <input class="smartsheet-input-cell" value="{{ item[column.name] }}" />
-        </template>
-        <template v-else>
-          {{ hash1 }}
-        </template>
-      </td>
-    </tr>
-  </table>
+  <div class="smart-sheet-table">
+    <smart-sheet-row :columns="columns"></smart-sheet-row>
+    <smart-sheet-row :columns="columns"></smart-sheet-row>
+    <smart-sheet-row :columns="columns"></smart-sheet-row>
+  </div>
+
 </template>
 
 <script>
+import SmartSheetRow from './SmartSheetRow.vue'
+
 export default {
   props: ['label', 'columns', 'items'],
   data: function() {
     return {};
   },
   components: {
+    SmartSheetRow
   },
   computed: {
     hash1: function() {
