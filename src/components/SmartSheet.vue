@@ -5,11 +5,8 @@
     <th v-for="column in columns">{{ column.display }}</th>
   </tr>
   <tr v-for="item in items">
-    <td>
-      <input class="smartsheet-input-cell" value="{{ item.name }}" />
-    </td>
-    <td>
-      {{ item.value }}
+    <td v-for="column in columns">
+      <input class="smartsheet-input-cell" value="{{ item[column.name] }}" />
     </td>
   </tr>
   </table>
