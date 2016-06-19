@@ -13,8 +13,8 @@ module.exports = {
     usermanager: ['./src/usermanager.js'],
     plotmanager: ['./src/plotmanager.js'],
     mint_ui: ['./src/mint_ui.js'],
-    vueboot: ['./src/vueboot.js'],
-    vuestrap: ['./src/vuestrap.js']
+    vuestrap: ['./src/vuestrap.js'],
+    smartsheet: ['./src/smartsheet.js']
   },
   output: {
     path: './dist',
