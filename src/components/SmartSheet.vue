@@ -10,7 +10,7 @@
         <input class="smartsheet-input-cell" value="{{ item[column.name] }}" />
       </template>
       <template v-else>
-        non-edit content
+        {{ hash1 }}
       </template>
     </td>
   </tr>
@@ -25,7 +25,9 @@ export default {
   },
   computed: {
     hash1: function() {
-      return 'hash1 value';
+      //console.log('>>> hash1:', this);
+      //return this.$get('columns') ;
+      return 'hash1';
     },
     sheetdata: function() {
       console.log('>>> in computed sheetdata');
