@@ -6,7 +6,12 @@
   </tr>
   <tr v-for="item in items">
     <td v-for="column in columns">
-      <input class="smartsheet-input-cell" value="{{ item[column.name] }}" />
+      <template v-if="column.edit">
+        <input class="smartsheet-input-cell" value="{{ item[column.name] }}" />
+      </template>
+      <template v-else>
+        non-edit content
+      </template>
     </td>
   </tr>
   </table>
@@ -18,9 +23,21 @@ export default {
   data: function() {
     return {};
   },
+  computed: {
+    hash1: function() {
+      return 'hash1 value';
+    },
+    sheetdata: function() {
+      console.log('>>> in computed sheetdata');
+      var data = { msg:'test sheetdata' };
+      return data;
+    }
+  },
   methods: {
-    apply: function () {
-
+    getData: function () {
+      var data = { msg:'test' };
+      return data;
+      /*
       // collect filter values from child components
       var userdata = {};
       for (let child of this.$children) {
@@ -29,7 +46,7 @@ export default {
       console.log('>>> apply - userdata:', userdata);
       //this.$dispatch('filter-change', userdata);
       setfilter(this.$store, userdata);
-      
+      */
     }
   },
 }

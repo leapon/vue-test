@@ -8,8 +8,9 @@ var sheet1 = new Vue({
   data: {
     label: 'List of Items',
     columns: [
-      { name:'name', display:'Name' },
-      { name:'value', display:'Value' }
+      { name:'name', display:'Name', edit:'input' },
+      { name:'value', display:'Value', edit:'input' },
+      { name:'hash1', display:'Hash1', edit:false }
     ],
     items: [
       { name:'table', value:20 },
@@ -25,6 +26,7 @@ var sheet1 = new Vue({
 $('#btnSheet1').click(showSheet1Info);
 
 function showSheet1Info() {
-  console.log('>>> showSheet1Info');
+  console.log('>>> showSheet1Info:', sheet1.$get('columns'), sheet1.$get('sheetdata'));
+    console.log('>>> showSheet1Info:', sheet1.getData());
   $('#info1').text('showSheet1Info');
 }
