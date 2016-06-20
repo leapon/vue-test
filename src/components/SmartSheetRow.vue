@@ -1,7 +1,12 @@
 <template>
   <div class="table-body-row">
     <div class="table-body-cell" v-for="column in columns">
-      <input class="smartsheet-input-cell" value="{{ column.name }}" />
+      <template v-if="column.edit">
+        <input class="smartsheet-input-cell" v-model="item[column.name]" />
+      </template>      
+      <template v-else>
+        <div class="read-only-cell">{{ description }}</div>
+      </template>
     </div>
   </div>
 </template>
@@ -13,6 +18,10 @@ export default {
     return {};
   },
   computed: {
+    description: function() {
+      var result = this.item.name + '/' + this.item.value;
+      return result;
+    }
   },
   methods: {
   }
@@ -39,5 +48,8 @@ export default {
 }
 .smartsheet-input-cell:focus {
   outline: none;
+}
+.read-only-cell {
+  width: 120px;
 }
 </style>

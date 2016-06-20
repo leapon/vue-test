@@ -41,7 +41,8 @@ var sheet2 = new Vue({
     label: 'Furniture List',
     columns: [
       { name:'name', display:'Name', edit:'input' },
-      { name:'value', display:'Value', edit:'input' }
+      { name:'value', display:'Value', edit:'input' },
+      { name:'description', display:'Description', edit:false }
     ],
     items: [
       { name:'table', value:20 },

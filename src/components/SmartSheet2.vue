@@ -1,9 +1,10 @@
 <template>
   <p>{{ label }}</p>
+  <p>{{ items|json }}</p>
   <div class="smart-sheet-table">
-    <smart-sheet-row :columns="columns"></smart-sheet-row>
-    <smart-sheet-row :columns="columns"></smart-sheet-row>
-    <smart-sheet-row :columns="columns"></smart-sheet-row>
+    <smart-sheet-row :columns="columns" :item="items[0]"></smart-sheet-row>
+    <smart-sheet-row :columns="columns" :item="items[1]"></smart-sheet-row>
+    <smart-sheet-row :columns="columns" :item="items[2]"></smart-sheet-row>
   </div>
 
 </template>
