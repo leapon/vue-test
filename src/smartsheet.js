@@ -62,14 +62,14 @@ var sheet2 = new Vue({
   data: {
     label: 'Furniture List',
     columns: [
-      { name:'name', display:'Name', edit:'input' },
-      { name:'value', display:'Value', edit:'input' }
+      { name:'firstname', display:'First Name', edit:'input' },
+      { name:'lastname', display:'Last Name', edit:'input' },
+      { name:'fullname', display:'Full Name', edit:false }
     ],
     items: [
-      { name:'table', value:20 },
-      { name:'bench', value:25 },
-      { name:'chair', value:22 },
-      { name:'shelf', value:38 }
+      { firstname:'alex', lastname:'tribec' },
+      { firstname:'ben', lastname:'aflec' },
+      { firstname:'eric', lastname:'boldwin' }
     ]
   },
   components: {

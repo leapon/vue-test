@@ -11,7 +11,7 @@
           <input class="smartsheet-input-cell" v-model="item[column.name]" />
         </template>
         <template v-else>
-          {{ hash1 }}
+          {{ fullname }}
         </template>
       </td>
     </tr>
@@ -27,6 +27,10 @@ export default {
   components: {
   },
   computed: {
+    fullname: function() {
+      var result = this.label;
+      return result;
+    }
   },
   methods: {
   },
