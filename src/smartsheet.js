@@ -42,7 +42,7 @@ var sheet2 = new Vue({
     columns: [
       { name:'name', display:'Name', edit:'input' },
       { name:'value', display:'Value', edit:'input' },
-      { name:'description', display:'Description', edit:false }
+      { name:'description', display:'Description', edit:'description' }
     ],
     items: [
       { name:'table', value:20 },

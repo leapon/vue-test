@@ -1,10 +1,10 @@
 <template>
   <div class="table-body-row">
     <div class="table-body-cell" v-for="column in columns">
-      <template v-if="column.edit">
+      <template v-if="column.edit=='input'">
         <input class="smartsheet-input-cell" v-model="item[column.name]" />
       </template>      
-      <template v-else>
+      <template v-if="column.edit=='description'">
         <div class="read-only-cell">{{ description }}</div>
       </template>
     </div>
