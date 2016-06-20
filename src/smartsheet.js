@@ -2,6 +2,7 @@ import Vue from 'vue'
 import store from './vuex/store'
 import SmartSheet from './components/SmartSheet.vue'
 import SmartSheet2 from './components/SmartSheet2.vue'
+import SmartSheet3 from './components/SmartSheet3.vue'
 
 // sheet1
 var sheet1 = new Vue({
@@ -53,3 +54,26 @@ var sheet2 = new Vue({
     SmartSheet2
   }
 });
+
+// sheet3
+var sheet2 = new Vue({
+  el: '#sheet3',
+  store,
+  data: {
+    label: 'Furniture List',
+    columns: [
+      { name:'name', display:'Name', edit:'input' },
+      { name:'value', display:'Value', edit:'input' }
+    ],
+    items: [
+      { name:'table', value:20 },
+      { name:'bench', value:25 },
+      { name:'chair', value:22 },
+      { name:'shelf', value:38 }
+    ]
+  },
+  components: {
+    SmartSheet3
+  }
+});
+
