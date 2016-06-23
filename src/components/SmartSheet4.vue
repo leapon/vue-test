@@ -11,13 +11,25 @@
       </td>
     </tr>
   </table>
+  <br/>
+  <p>filter: {{ filter|json }}</p>
 </template>
 
 <script>
+import { setfilter } from '../vuex/actions';
+
 export default {
   props: ['columns', 'items'],
   data: function() {
     return {};
+  },
+  vuex: {
+    getters: {
+      filter: state => state.filter
+    },
+    actions: {
+      setfilter
+    }
   },
   components: {
   },
