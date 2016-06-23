@@ -3,6 +3,7 @@ import store from './vuex/store'
 import SmartSheet from './components/SmartSheet.vue'
 import SmartSheet2 from './components/SmartSheet2.vue'
 import SmartSheet3 from './components/SmartSheet3.vue'
+import SmartSheet4 from './components/SmartSheet4.vue'
 
 // sheet1
 var sheet1 = new Vue({
@@ -57,11 +58,11 @@ var sheet2 = new Vue({
 });
 
 // sheet3
-var sheet2 = new Vue({
+var sheet3 = new Vue({
   el: '#sheet3',
   store,
   data: {
-    label: 'Furniture List',
+    label: 'User List',
     columns: [
       { name:'firstname', display:'First Name', edit:'input' },
       { name:'lastname', display:'Last Name', edit:'input' },
@@ -75,6 +76,27 @@ var sheet2 = new Vue({
   },
   components: {
     SmartSheet3
+  }
+});
+
+// sheet4
+var sheet4 = new Vue({
+  el: '#sheet4',
+  store,
+  data: {
+    columns: [
+      { name:'firstname', display:'First Name', edit:'input' },
+      { name:'lastname', display:'Last Name', edit:'input' },
+      { name:'fullname', display:'Full Name', edit:false }
+    ],
+    users: [
+      { firstname:'Alex', lastname:'Tribec' },
+      { firstname:'Ben', lastname:'Aflec' },
+      { firstname:'Eric', lastname:'Boldwin' }
+    ]
+  },
+  components: {
+    SmartSheet4
   }
 });
 

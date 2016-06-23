@@ -1,6 +1,4 @@
 <template>
-  <p>{{ label }}</p>
-  <p>{{ items|json }}</p>
   <table class="table table-bordered table-striped">
     <tr>
       <th v-for="column in columns">{{ column.display }}</th>
@@ -10,9 +8,6 @@
         <template v-if="column.edit">
           <input class="smartsheet-input-cell" v-model="item[column.name]" />
         </template>
-        <template v-else>
-          {{ fullname }}
-        </template>
       </td>
     </tr>
   </table>
@@ -20,17 +15,13 @@
 
 <script>
 export default {
-  props: ['label', 'columns', 'items'],
+  props: ['columns', 'items'],
   data: function() {
     return {};
   },
   components: {
   },
   computed: {
-    fullname: function() {
-      var result = this.label;
-      return result;
-    }
   },
   methods: {
   },
