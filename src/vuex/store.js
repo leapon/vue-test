@@ -34,6 +34,11 @@ const mutations = {
   },
   SETITEMS(state, items) {
     state.items = items;
+  },
+  CHANGEITEM(state, index, column, value) {
+    state.items[index][column] = value;
+    console.log('>>>', state.items[index]);
+    state.items[index].fullname = state.items[index].firstname + ',' + state.items[index].lastname;
   }
 }
 

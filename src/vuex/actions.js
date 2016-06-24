@@ -21,3 +21,7 @@ export const setitems = ({ dispatch, state }, items) => {
   dispatch('SETITEMS', items)
 }
 
+export const changeitem = ({ dispatch, state }, index, column, value) => {
+  dispatch('CHANGEITEM', index, column, value)
+}
+

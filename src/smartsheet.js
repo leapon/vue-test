@@ -98,8 +98,8 @@ var sheet4 = new Vue({
 });
 
 var items = [
-  { firstname:'Mary', lastname:'Poppin', fullname:'Tricky Name' },
-  { firstname:'Ben', lastname:'Aflec' },
-  { firstname:'Eric', lastname:'Boldwin' }
+  { firstname:'Mary', lastname:'Poppin', fullname:'' },
+  { firstname:'Ben', lastname:'Aflec', fullname:'' },
+  { firstname:'Eric', lastname:'Boldwin', fullname:'' }
 ];
 setitems(store, items);

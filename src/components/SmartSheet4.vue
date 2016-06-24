@@ -25,7 +25,7 @@
 </template>
 
 <script>
-// import { setfilter } from '../vuex/actions';
+import { changeitem } from '../vuex/actions';
 
 export default {
   props: ['columns'],
@@ -37,7 +37,7 @@ export default {
       items: state => state.items
     },
     actions: {
-      // setfilter
+      changeitem
     }
   },
   components: {
@@ -46,12 +46,10 @@ export default {
   },
   methods: {
     cellChange: function(event) {
-      console.log('>>> cellChange:', event);
-      console.log('>>> cellChange:', event.srcElement);
-      console.log('>>> cellChange:', event.srcElement.value);
-      console.log('>>> cellChange:', $(event.srcElement).attr('data-row-index'));
-      console.log('>>> cellChange:', $(event.srcElement).attr('data-column'));
-      
+      var index = $(event.srcElement).attr('data-row-index');
+      var column = $(event.srcElement).attr('data-column');
+      var value = event.srcElement.value;
+      changeitem(this.$store, index, column, value)
     }
   },
 }
