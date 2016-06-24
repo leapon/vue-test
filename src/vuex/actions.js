@@ -16,3 +16,8 @@ export const setfilter = ({ dispatch, state }, filter) => {
     dispatch('SETUSERS', data.data);
   });
 }
+
+export const setitems = ({ dispatch, state }, items) => {
+  dispatch('SETITEMS', items)
+}
+

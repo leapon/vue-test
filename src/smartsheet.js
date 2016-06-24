@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import store from './vuex/store'
+import { setitems } from './vuex/actions'
+
 import SmartSheet from './components/SmartSheet.vue'
 import SmartSheet2 from './components/SmartSheet2.vue'
 import SmartSheet3 from './components/SmartSheet3.vue'
@@ -85,14 +87,9 @@ var sheet4 = new Vue({
   store,
   data: {
     columns: [
-      { name:'firstname', display:'First Name', edit:'input' },
-      { name:'lastname', display:'Last Name', edit:'input' },
-      { name:'fullname', display:'Full Name', edit:false }
-    ],
-    users: [
-      { firstname:'Alex', lastname:'Tribec' },
-      { firstname:'Ben', lastname:'Aflec' },
-      { firstname:'Eric', lastname:'Boldwin' }
+      { name:'firstname', display:'First Name', type:'input' },
+      { name:'lastname', display:'Last Name', type:'input' },
+      { name:'fullname', display:'Full Name', type:'view' }
     ]
   },
   components: {
@@ -100,3 +97,9 @@ var sheet4 = new Vue({
   }
 });
 
+var items = [
+  { firstname:'Mary', lastname:'Poppin', fullname:'Tricky Name' },
+  { firstname:'Ben', lastname:'Aflec' },
+  { firstname:'Eric', lastname:'Boldwin' }
+];
+setitems(store, items);

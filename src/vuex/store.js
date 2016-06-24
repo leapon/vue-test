@@ -31,6 +31,9 @@ const mutations = {
   },
   SETUSERS(state, users) {
     state.users = users;
+  },
+  SETITEMS(state, items) {
+    state.items = items;
   }
 }
 

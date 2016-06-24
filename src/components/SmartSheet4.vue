@@ -5,34 +5,39 @@
     </tr>
     <tr v-for="(index, item) in items">
       <td v-for="column in columns">
-        <template v-if="column.edit">
+        <template v-if="column.type == 'input'">
           <input class="smartsheet-input-cell"
             data-row-index="{{ index }}"
             data-column="{{ column.name }}"
-            v-model="item[column.name]" 
+            v-model="item[column.name]"
             @change="cellChange"/>
+        </template>
+        <template v-if="column.type == 'view'">
+          <span
+            data-row-index="{{ index }}"
+            data-column="{{ column.name }}"
+          >{{ item[column.name] }}</span>
         </template>
       </td>
     </tr>
   </table>
   <br/>
-  <p>filter: {{ filter|json }}</p>
 </template>
 
 <script>
-import { setfilter } from '../vuex/actions';
+// import { setfilter } from '../vuex/actions';
 
 export default {
-  props: ['columns', 'items'],
+  props: ['columns'],
   data: function() {
     return {};
   },
   vuex: {
     getters: {
-      filter: state => state.filter
+      items: state => state.items
     },
     actions: {
-      setfilter
+      // setfilter
     }
   },
   components: {
@@ -46,6 +51,7 @@ export default {
       console.log('>>> cellChange:', event.srcElement.value);
       console.log('>>> cellChange:', $(event.srcElement).attr('data-row-index'));
       console.log('>>> cellChange:', $(event.srcElement).attr('data-column'));
+      
     }
   },
 }
