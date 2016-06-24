@@ -3,10 +3,12 @@
     <tr>
       <th v-for="column in columns">{{ column.display }}</th>
     </tr>
-    <tr v-for="item in items">
+    <tr v-for="(index, item) in items">
       <td v-for="column in columns">
         <template v-if="column.edit">
-          <input class="smartsheet-input-cell" 
+          <input class="smartsheet-input-cell"
+            data-row-index="{{ index }}"
+            data-column="{{ column.name }}"
             v-model="item[column.name]" 
             @change="cellChange"/>
         </template>
@@ -42,6 +44,8 @@ export default {
       console.log('>>> cellChange:', event);
       console.log('>>> cellChange:', event.srcElement);
       console.log('>>> cellChange:', event.srcElement.value);
+      console.log('>>> cellChange:', $(event.srcElement).attr('data-row-index'));
+      console.log('>>> cellChange:', $(event.srcElement).attr('data-column'));
     }
   },
 }
