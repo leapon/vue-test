@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { updateItem } from '../services/support.js'
 
 Vue.use(Vuex)
 
@@ -37,8 +38,7 @@ const mutations = {
   },
   CHANGEITEM(state, index, column, value) {
     state.items[index][column] = value;
-    console.log('>>>', state.items[index]);
-    state.items[index].fullname = state.items[index].firstname + ',' + state.items[index].lastname;
+    updateItem(state.items[index]);
   }
 }
 
