@@ -14,7 +14,8 @@ module.exports = {
     plotmanager: ['./src/plotmanager.js'],
     mint_ui: ['./src/mint_ui.js'],
     vuestrap: ['./src/vuestrap.js'],
-    smartsheet: ['./src/smartsheet.js']
+    smartsheet: ['./src/smartsheet.js'],
+    smartform: ['./src/smartform.js']
   },
   output: {
     path: './dist',

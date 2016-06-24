@@ -12,7 +12,9 @@ const state = {
   users: [],
   // for smartsheet
   columns: [],
-  items: []
+  items: [],
+  // for smartform
+  form: {}
 }
 
 // define possible mutations
@@ -39,7 +41,10 @@ const mutations = {
   CHANGEITEM(state, index, column, value) {
     state.items[index][column] = value;
     updateItem(state.items[index]);
-  }
+  },
+  SETFORM(state, form) {
+    state.form = form;
+  },
 }
 
 // create the store

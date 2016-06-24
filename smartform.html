@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue test</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <style>
+    </style>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4><a href="/">Home</a></h4>
+          <p>Smart Form</p>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-md-8" id="form1">
+          <smart-form1 :columns="columns"></smart-form1>
+        </div>
+        <div class="col-md-4">
+          <button id="btnForm1" class="btn btn-default">Form1 Info</button>
+          <br/>
+          <div id="info1"></div>
+          <br/>
+        </div>
+      </div>
+      <hr/>
+    </div>
+    <script src="dist/smartform.js"></script>
+  </body>
+</html>
