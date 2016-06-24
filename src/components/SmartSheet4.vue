@@ -6,7 +6,9 @@
     <tr v-for="item in items">
       <td v-for="column in columns">
         <template v-if="column.edit">
-          <input class="smartsheet-input-cell" v-model="item[column.name]" />
+          <input class="smartsheet-input-cell" 
+            v-model="item[column.name]" 
+            @change="cellChange"/>
         </template>
       </td>
     </tr>
@@ -36,6 +38,11 @@ export default {
   computed: {
   },
   methods: {
+    cellChange: function(event) {
+      console.log('>>> cellChange:', event);
+      console.log('>>> cellChange:', event.srcElement);
+      console.log('>>> cellChange:', event.srcElement.value);
+    }
   },
 }
 </script>

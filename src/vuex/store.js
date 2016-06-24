@@ -8,7 +8,10 @@ const state = {
   count: 0,
   filter: {},
   fields: [],
-  users: []
+  users: [],
+  // for smartsheet
+  columns: [],
+  items: []
 }
 
 // define possible mutations
