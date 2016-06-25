@@ -47,7 +47,7 @@ export default {
       setfilter(this.$store, userdata);
       */
     }
-  },
+  }
 }
 </script>
 

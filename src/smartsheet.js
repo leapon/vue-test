@@ -2,6 +2,7 @@ import Vue from 'vue'
 import store from './vuex/store'
 import { setitems } from './vuex/actions'
 
+import SmartSheetInfo from './components/SmartSheetInfo.vue'
 import SmartSheet1 from './components/SmartSheet1.vue'
 import SmartSheet2 from './components/SmartSheet2.vue'
 import SmartSheet3 from './components/SmartSheet3.vue'
@@ -94,6 +95,15 @@ var sheet4 = new Vue({
   },
   components: {
     SmartSheet4
+  }
+});
+
+// sheet info
+var info4 = new Vue({
+  el: '#info4',
+  store,
+  components: {
+    SmartSheetInfo
   }
 });
 

@@ -51,7 +51,7 @@ export default {
       var value = event.srcElement.value;
       changeitem(this.$store, index, column, value)
     }
-  },
+  }
 }
 </script>
 
