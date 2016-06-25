@@ -1,5 +1,5 @@
 <template>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered">
     <tr>
       <th v-for="column in columns">{{ column.display }}</th>
     </tr>
