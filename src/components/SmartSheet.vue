@@ -22,13 +22,14 @@
     </tr>
   </table>
   <br/>
+  <p>name: {{ name }}</p>
 </template>
 
 <script>
 import { changeitem } from '../vuex/actions';
 
 export default {
-  props: ['columns'],
+  props: ['name', 'columns'],
   data: function() {
     return {};
   },
