@@ -10,7 +10,7 @@
           v-model="form[column.name]"
           @change="formValueChange"/>
       </template>
-      <template v-if="column.type == 'select'">
+      <template v-if="column.type == 'select-one'">
         <select
           class="form-control"
           data-column="{{ column.name }}"
@@ -19,7 +19,7 @@
           <option v-for="value in column.values">{{ value }}</option>
         </select>
       </template>
-      <template v-if="column.type == 'multiselect'">
+      <template v-if="column.type == 'select-multi'">
         <select
           class="form-control"
           data-column="{{ column.name }}"
@@ -29,11 +29,12 @@
           <option v-for="value in column.values">{{ value }}</option>
         </select>
       </template>
-      <template v-if="column.type == 'checkbox'">
+      <template v-if="column.type == 'select-checkbox'">
         <div class="checkbox" v-for="value in column.values">
           <label>
             <input type="checkbox"
               name="{{ column.name }}"
+              value="{{ value }}"
               data-column="{{ column.name }}"
               v-model="form[column.name]"
               @change="formValueChange" />
@@ -41,11 +42,12 @@
           </label>
         </div>
       </template>
-      <template v-if="column.type == 'radio'">
+      <template v-if="column.type == 'select-radio'">
         <div class="radio" v-for="value in column.values">
           <label>
             <input type="radio"
-              name="{{ column.name }}"
+              name="{{ column.name + $index }}"
+              value="{{ value }}"
               data-column="{{ column.name }}"
               v-model="form[column.name]"
               @change="formValueChange" />

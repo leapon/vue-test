@@ -28,10 +28,10 @@ var form2 = new Vue({
     columns: [
       { name:'firstname', type:'input' },
       { name:'lastname', type:'input' },
-      { name:'gender', type:'select', values:['male', 'female'] },
-      { name:'course', type:'multiselect', values:['math', 'english', 'pe'] },
-      { name:'grade', type:'radio', values:['grade1', 'grade2', 'grade3'] },
-      { name:'interest', type:'checkbox', values:['swim', 'basketball', 'baseball'] },
+      { name:'gender', type:'select-one', values:['male', 'female'] },
+      { name:'course', type:'select-multi', values:['math', 'english', 'pe'] },
+      { name:'grade', type:'select-radio', values:['grade1', 'grade2', 'grade3'] },
+      { name:'interest', type:'select-checkbox', values:['swim', 'basketball', 'baseball'] },
       { name:'comment', type:'text' }
     ]
   },
