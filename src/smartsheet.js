@@ -9,6 +9,22 @@ import SmartSheet2 from './components/SmartSheet2.vue'
 import SmartSheet3 from './components/SmartSheet3.vue'
 import SmartSheet4 from './components/SmartSheet4.vue'
 
+// sheet0
+var sheet0 = new Vue({
+  el: '#sheet0',
+  store,
+  data: {
+    columns: [
+      { name:'firstname', display:'First Name', type:'input' },
+      { name:'lastname', display:'Last Name', type:'input' },
+      { name:'fullname', display:'Full Name', type:'view' }
+    ]
+  },
+  components: {
+    SmartSheet
+  }
+});
+
 // sheet1
 var sheet1 = new Vue({
   el: '#sheet1',

@@ -18,6 +18,17 @@
         </div>
       </div>
       <br/>
+
+      <div class="row">
+        <div class="col-md-8" id="sheet0">
+          <smart-sheet :columns="columns"></smart-sheet>
+        </div>
+        <div class="col-md-4">
+          <div id="info0">
+          </div>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-8" id="sheet1">
           <smart-sheet1 :label="label" :columns="columns" :items="items"></smart-sheet1>
@@ -61,16 +72,6 @@
           <!-- <button id="btnSheet4" class="btn btn-default">Sheet4 Info</button> -->
           <div id="info4">
             <smart-sheet-info></smart-sheet-info>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-8" id="sheet5">
-          <smart-sheet :columns="columns"></smart-sheet>
-        </div>
-        <div class="col-md-4">
-          <div id="info4">
           </div>
         </div>
       </div>
