@@ -46,7 +46,7 @@
         <div class="radio" v-for="value in column.values">
           <label>
             <input type="radio"
-              name="{{ column.name + $index }}"
+              name="{{ column.name }}"
               value="{{ value }}"
               data-column="{{ column.name }}"
               v-model="form[column.name]"
