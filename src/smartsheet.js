@@ -15,6 +15,7 @@ var sheet0 = new Vue({
   store,
   data: {
     name: 'budget',
+    caption: 'Budget List',
     columns: [
       { name:'firstname', display:'First Name', type:'input' },
       { name:'lastname', display:'Last Name', type:'input' },

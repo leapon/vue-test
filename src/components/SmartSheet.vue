@@ -1,5 +1,6 @@
 <template>
   <table class="table table-bordered">
+    <caption>{{ caption }}</caption>
     <tr>
       <th v-for="column in columns">{{ column.display }}</th>
     </tr>
@@ -29,7 +30,7 @@
 import { changeitem } from '../vuex/actions';
 
 export default {
-  props: ['name', 'columns'],
+  props: ['name', 'caption', 'columns'],
   data: function() {
     return {};
   },
