@@ -3,8 +3,6 @@
 </template>
 
 <script>
-import { changeitem } from '../vuex/actions';
-
 export default {
   props: [],
   data: function() {
