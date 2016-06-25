@@ -1,6 +1,4 @@
-# vue-simple
-
-> A Vue.js project
+# vue-test
 
 ## Build Setup
 
