@@ -3,6 +3,7 @@ import store from './vuex/store'
 import { setform } from './vuex/actions'
 
 import SmartForm1 from './components/SmartForm1.vue'
+import SmartForm2 from './components/SmartForm2.vue'
 
 // form1
 var form1 = new Vue({
@@ -19,8 +20,24 @@ var form1 = new Vue({
   }
 });
 
+// form2
+var form2 = new Vue({
+  el: '#form2',
+  store,
+  data: {
+    columns: [
+      { name:'firstname', display:'First Name', type:'input' },
+      { name:'lastname', display:'Last Name', type:'input' }
+    ]
+  },
+  components: {
+    SmartForm2
+  }
+});
+
+// set form data
 var form = {
-  firstname:'Mary',
-  lastname:'Poppin'
+  firstname:'Jack',
+  lastname:'Bruce'
 };
 setform(store, form);

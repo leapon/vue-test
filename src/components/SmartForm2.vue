@@ -1,22 +1,21 @@
 <template>
-  <table class="table table-form">
-    <tr v-for="column in columns">
-      <td class="cell-label">{{ column.display }}</td>
-      <td>
-        <template v-if="column.type == 'input'">
-          <input class="form-control"
-            data-column="{{ column.name }}"
-            v-model="form[column.name]"
-            @change="formValueChange"/>
-        </template>
-      </td>
-    </tr>
-  </table>
-  <br/>
+  <form>
+    <template v-for="column in columns">
+    <div class="form-group">
+      <label for="{{ column.name }}">{{ column.display }}</label>
+      <template v-if="column.type == 'input'">
+        <input
+          class="form-control"
+          data-column="{{ column.name }}"
+          v-model="form[column.name]"
+          @change="formValueChange"/>
+      </template>
+    </div>
+    </template>
 </template>
 
 <script>
-// use table to layout form
+// use bootstrap form for layout
 //import { changeform } from '../vuex/actions';
 
 export default {
