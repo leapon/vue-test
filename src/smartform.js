@@ -4,6 +4,7 @@ import { setform } from './vuex/actions'
 
 import SmartForm1 from './components/SmartForm1.vue'
 import SmartForm2 from './components/SmartForm2.vue'
+import SmartFormInfo from './components/SmartFormInfo.vue'
 
 // form1
 var form1 = new Vue({
@@ -37,6 +38,16 @@ var form2 = new Vue({
   },
   components: {
     SmartForm2
+  }
+});
+
+var info2 = new Vue({
+  el: '#info2',
+  store,
+  data: {
+  },
+  components: {
+    SmartFormInfo
   }
 });
 

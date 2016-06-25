@@ -100,7 +100,7 @@ export default {
       changeform(this.$store, index, column, value)
       */
     }
-  },
+  }
 }
 </script>
 
