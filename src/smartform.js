@@ -26,8 +26,10 @@ var form2 = new Vue({
   store,
   data: {
     columns: [
-      { name:'firstname', display:'First Name', type:'input' },
-      { name:'lastname', display:'Last Name', type:'input' }
+      { name:'firstname', type:'input' },
+      { name:'lastname', type:'input' },
+      { name:'gender', type:'select', values:['male', 'female'] },
+      { name:'comment', type:'text' }
     ]
   },
   components: {
@@ -37,7 +39,9 @@ var form2 = new Vue({
 
 // set form data
 var form = {
-  firstname:'Jack',
-  lastname:'Bruce'
+  firstname: 'Jack',
+  lastname: 'Bruce',
+  gender: 'male',
+  comment: 'hello world'
 };
 setform(store, form);

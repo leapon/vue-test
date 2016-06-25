@@ -2,13 +2,29 @@
   <form>
     <template v-for="column in columns">
     <div class="form-group">
-      <label for="{{ column.name }}">{{ column.display }}</label>
+      <label for="{{ column.name }}">{{ column.display || column.name }}</label>
       <template v-if="column.type == 'input'">
         <input
           class="form-control"
           data-column="{{ column.name }}"
           v-model="form[column.name]"
           @change="formValueChange"/>
+      </template>
+      <template v-if="column.type == 'select'">
+        <select
+          class="form-control"
+          data-column="{{ column.name }}"
+          v-model="form[column.name]"
+          @change="formValueChange">
+          <option v-for="value in column.values">{{ value }}</option>
+        </select>
+      </template>
+      <template v-if="column.type == 'text'">
+        <textarea
+          class="form-control"
+          data-column="{{ column.name }}"
+          v-model="form[column.name]"
+          @change="formValueChange"></textarea>
       </template>
     </div>
     </template>
