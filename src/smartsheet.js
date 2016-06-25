@@ -2,6 +2,7 @@ import Vue from 'vue'
 import store from './vuex/store'
 import { setitems } from './vuex/actions'
 
+import SmartSheet from './components/SmartSheet.vue'
 import SmartSheetInfo from './components/SmartSheetInfo.vue'
 import SmartSheet1 from './components/SmartSheet1.vue'
 import SmartSheet2 from './components/SmartSheet2.vue'

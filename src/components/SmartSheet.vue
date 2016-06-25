@@ -1,56 +1,55 @@
 <template>
-  <p>{{ label }}</p>
-  <table class="table table-bordered table-striped"">
+  <table class="table table-bordered table-striped">
     <tr>
       <th v-for="column in columns">{{ column.display }}</th>
     </tr>
-    <tr v-for="item in items">
+    <tr v-for="(index, item) in items">
       <td v-for="column in columns">
-        <template v-if="column.edit">
-          <input class="smartsheet-input-cell" value="{{ item[column.name] }}" />
+        <template v-if="column.type == 'input'">
+          <input class="smartsheet-input-cell"
+            data-row-index="{{ index }}"
+            data-column="{{ column.name }}"
+            v-model="item[column.name]"
+            @change="cellChange"/>
         </template>
-        <template v-else>
-          {{ hash1 }}
+        <template v-if="column.type == 'view'">
+          <span
+            data-row-index="{{ index }}"
+            data-column="{{ column.name }}"
+          >{{ item[column.name] }}</span>
         </template>
       </td>
     </tr>
   </table>
+  <br/>
 </template>
 
 <script>
+import { changeitem } from '../vuex/actions';
+
 export default {
-  props: ['label', 'columns', 'items'],
+  props: ['columns'],
   data: function() {
     return {};
+  },
+  vuex: {
+    getters: {
+      items: state => state.items
+    },
+    actions: {
+      changeitem
+    }
   },
   components: {
   },
   computed: {
-    hash1: function() {
-      //console.log('>>> hash1:', this);
-      //return this.$get('columns') ;
-      return 'hash1';
-    },
-    sheetdata: function() {
-      console.log('>>> in computed sheetdata');
-      var data = { msg:'test sheetdata' };
-      return data;
-    }
   },
   methods: {
-    getData: function () {
-      var data = { msg:'test' };
-      return data;
-      /*
-      // collect filter values from child components
-      var userdata = {};
-      for (let child of this.$children) {
-        userdata[child.$get('name')] = child.$get('value');
-      }
-      console.log('>>> apply - userdata:', userdata);
-      //this.$dispatch('filter-change', userdata);
-      setfilter(this.$store, userdata);
-      */
+    cellChange: function(event) {
+      var index = $(event.srcElement).attr('data-row-index');
+      var column = $(event.srcElement).attr('data-column');
+      var value = event.srcElement.value;
+      changeitem(this.$store, index, column, value)
     }
   }
 }
@@ -62,7 +61,6 @@ export default {
   background: transparent;
   font-size: 13px;
   box-sizing: border-box;
-  border: solid 0px #fff;
 }
 .smartsheet-input-cell:focus {
   outline: none;
