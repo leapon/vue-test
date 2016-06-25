@@ -19,6 +19,40 @@
           <option v-for="value in column.values">{{ value }}</option>
         </select>
       </template>
+      <template v-if="column.type == 'multiselect'">
+        <select
+          class="form-control"
+          data-column="{{ column.name }}"
+          v-model="form[column.name]"
+          @change="formValueChange"
+          multiple>
+          <option v-for="value in column.values">{{ value }}</option>
+        </select>
+      </template>
+      <template v-if="column.type == 'checkbox'">
+        <div class="checkbox" v-for="value in column.values">
+          <label>
+            <input type="checkbox"
+              name="{{ column.name }}"
+              data-column="{{ column.name }}"
+              v-model="form[column.name]"
+              @change="formValueChange" />
+            {{ value }}
+          </label>
+        </div>
+      </template>
+      <template v-if="column.type == 'radio'">
+        <div class="radio" v-for="value in column.values">
+          <label>
+            <input type="radio"
+              name="{{ column.name }}"
+              data-column="{{ column.name }}"
+              v-model="form[column.name]"
+              @change="formValueChange" />
+            {{ value }}
+          </label>
+        </div>
+      </template>
       <template v-if="column.type == 'text'">
         <textarea
           class="form-control"

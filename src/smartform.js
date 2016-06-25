@@ -29,6 +29,9 @@ var form2 = new Vue({
       { name:'firstname', type:'input' },
       { name:'lastname', type:'input' },
       { name:'gender', type:'select', values:['male', 'female'] },
+      { name:'course', type:'multiselect', values:['math', 'english', 'pe'] },
+      { name:'grade', type:'radio', values:['grade1', 'grade2', 'grade3'] },
+      { name:'interest', type:'checkbox', values:['swim', 'basketball', 'baseball'] },
       { name:'comment', type:'text' }
     ]
   },
