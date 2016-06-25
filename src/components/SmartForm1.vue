@@ -1,10 +1,10 @@
 <template>
-  <table class="table table-bordered">
+  <table class="table table-form">
     <tr v-for="column in columns">
-      <td>{{ column.display }}</td>
+      <td class="cell-label">{{ column.display }}</td>
       <td>
         <template v-if="column.type == 'input'">
-          <input class="smartform-input-cell"
+          <input class="form-control"
             data-column="{{ column.name }}"
             v-model="form[column.name]"
             @change="formValueChange"/>
@@ -53,13 +53,11 @@ export default {
 </script>
 
 <style>
-.smartform-input-cell {
-  width: 100%;
-  background: transparent;
-  font-size: 13px;
-  box-sizing: border-box;
+.table-form td.cell-label {
+  padding-top: 15px;
 }
-.smartform-input-cell:focus {
-  outline: none;
+.table-form th, .table-form td {
+    border-top: none !important;
+    border-left: none !important;
 }
 </style>
