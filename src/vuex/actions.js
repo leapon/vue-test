@@ -21,6 +21,10 @@ export const setStoreItem = ({ dispatch, state }, name, values) => {
   dispatch('SETSTOREITEM', name, values)
 }
 
+export const changeStoreItem = ({ dispatch, state }, name, index, column, value) => {
+  dispatch('CHANGESTOREITEM', name, index, column, value)
+}
+
 export const setitems = ({ dispatch, state }, items) => {
   dispatch('SETITEMS', items)
 }

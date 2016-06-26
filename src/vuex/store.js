@@ -47,6 +47,12 @@ const mutations = {
   },
   SETSTOREITEM(state, name, values) {
     state[name] = values;
+  },
+  CHANGESTOREITEM(state, name, index, column, value) {
+    console.log('>>> CHANGESTOREITEM', name, index, column, value);
+    console.log('>>> state[name][index][column]:', state[name][index][column]);
+    state[name][index][column] = value;
+    //updateItem(state[name][index]);
   }
 }
 

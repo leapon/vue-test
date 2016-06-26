@@ -49,12 +49,11 @@
     </tr>
   </table>
   <br/>
-  <p>name: {{ name }}</p>
 </template>
 
 <script>
 import store from '../vuex/store.js';
-import { changeitem } from '../vuex/actions';
+import { changeStoreItem } from '../vuex/actions';
 
 export default {
   props: ['name', 'caption', 'columns'],
@@ -63,27 +62,26 @@ export default {
   },
   vuex: {
     getters: {
-      items: state => state.items
     },
     actions: {
-      changeitem
+      changeStoreItem
     }
   },
   components: {
   },
   computed: {
-    /*
     items: function() {
       return store.state[this.name];
     }
-    */
   },
   methods: {
     cellChange: function(event) {
       var index = $(event.srcElement).attr('data-row-index');
       var column = $(event.srcElement).attr('data-column');
       var value = event.srcElement.value;
-      changeitem(this.$store, index, column, value)
+      console.log('>>> cellChange:', event.srcElement);
+      console.log('>>> cellChange:', this.name, index, column, value);
+      changeStoreItem(this.$store, this.name, index, column, value)
     }
   }
 }
