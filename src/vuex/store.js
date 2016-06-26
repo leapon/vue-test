@@ -45,6 +45,9 @@ const mutations = {
   SETFORM(state, form) {
     state.form = form;
   },
+  SETSTOREITEM(state, name, values) {
+    state[name] = values;
+  }
 }
 
 // create the store

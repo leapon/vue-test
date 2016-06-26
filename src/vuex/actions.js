@@ -17,6 +17,10 @@ export const setfilter = ({ dispatch, state }, filter) => {
   });
 }
 
+export const setStoreItem = ({ dispatch, state }, name, values) => {
+  dispatch('SETSTOREITEM', name, values)
+}
+
 export const setitems = ({ dispatch, state }, items) => {
   dispatch('SETITEMS', items)
 }

@@ -13,6 +13,32 @@
             v-model="item[column.name]"
             @change="cellChange"/>
         </template>
+        <template v-if="column.type == 'date'">
+          <input class="smartsheet-input-cell"
+            data-row-index="{{ index }}"
+            data-column="{{ column.name }}"
+            v-model="item[column.name]"
+            @change="cellChange"/>
+        </template>
+        <template v-if="column.type == 'select-one'">
+          <select
+            class="form-control"
+            data-column="{{ column.name }}"
+            v-model="item[column.name]"
+            @change="cellChange">
+            <option v-for="value in column.values">{{ value }}</option>
+          </select>
+        </template>
+        <template v-if="column.type == 'select-multi'">
+          <select
+            class="form-control"
+            data-column="{{ column.name }}"
+            v-model="item[column.name]"
+            @change="cellChange"
+            multiple>
+            <option v-for="value in column.values">{{ value }}</option>
+          </select>
+        </template>
         <template v-if="column.type == 'view'">
           <span
             data-row-index="{{ index }}"
@@ -27,6 +53,7 @@
 </template>
 
 <script>
+import store from '../vuex/store.js';
 import { changeitem } from '../vuex/actions';
 
 export default {
@@ -45,6 +72,11 @@ export default {
   components: {
   },
   computed: {
+    /*
+    items: function() {
+      return store.state[this.name];
+    }
+    */
   },
   methods: {
     cellChange: function(event) {

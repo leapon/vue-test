@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import store from './vuex/store'
-import { setitems } from './vuex/actions'
+import { setitems, setStoreItem } from './vuex/actions'
 
 import SmartSheet from './components/SmartSheet.vue'
 import SmartSheetInfo from './components/SmartSheetInfo.vue'
@@ -47,17 +47,18 @@ var userModel = {
 };
 
 // sheet0
+var storeItemName = 'testusers';
 var sheet0 = new Vue({
   el: '#sheet0',
   store,
   data: {
-    name: 'testusers',
+    name: storeItemName,
     caption: 'User List',
     columns: [
       { name:'firstname', display:'First Name', type:'string' },
       { name:'lastname', display:'Last Name', type:'string' },
-      { name:'roles', display:'Roles', type:'array', values:['user', 'manager', 'admin'] },
-      { name:'status', display:'Status', type:'string', values:['active', 'inactive'] },
+      { name:'roles', display:'Roles', type:'select-multi', values:['user', 'manager', 'admin'] },
+      { name:'status', display:'Status', type:'select-one', values:['active', 'inactive'] },
       { name:'create_date', display:'Create Date', type:'date' },
       { name:'create_by', display:'Created By', type:'string' }
     ]
@@ -66,6 +67,13 @@ var sheet0 = new Vue({
     SmartSheet
   }
 });
+
+var testUsers = [
+  { firstname:'Mary', lastname:'Poppin', roles:[], status:'active', create_date:'', create_by:'' },
+  { firstname:'Ben', lastname:'Aflec', roles:[], status:'active', create_date:'', create_by:'' },
+  { firstname:'Eric', lastname:'Boldwin', roles:[], status:'inactive', create_date:'', create_by:'' }
+];
+setStoreItem(store, storeItemName, testUsers);
 
 // sheet1
 var sheet1 = new Vue({
@@ -170,8 +178,8 @@ var info4 = new Vue({
 });
 
 var items = [
-  { firstname:'Mary', lastname:'Poppin', fullname:'' },
-  { firstname:'Ben', lastname:'Aflec', fullname:'' },
-  { firstname:'Eric', lastname:'Boldwin', fullname:'' }
+  { firstname:'Mary', lastname:'Poppin', fullname:'', roles:[], status:'active', create_date:'', create_by:'' },
+  { firstname:'Ben', lastname:'Aflec', fullname:'', roles:[], status:'active', create_date:'', create_by:'' },
+  { firstname:'Eric', lastname:'Boldwin', fullname:'', roles:[], status:'active', create_date:'', create_by:'' }
 ];
 setitems(store, items);
