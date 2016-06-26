@@ -62,6 +62,7 @@ export default {
   },
   vuex: {
     getters: {
+      items: state => state.items
     },
     actions: {
       changeStoreItem
@@ -70,9 +71,11 @@ export default {
   components: {
   },
   computed: {
+    /*
     items: function() {
       return store.state[this.name];
     }
+    */
   },
   methods: {
     cellChange: function(event) {
