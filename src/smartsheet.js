@@ -9,17 +9,57 @@ import SmartSheet2 from './components/SmartSheet2.vue'
 import SmartSheet3 from './components/SmartSheet3.vue'
 import SmartSheet4 from './components/SmartSheet4.vue'
 
+function modelToColumns() {
+  var columns = [];
+
+  return columns;
+}
+
+var userModel = {
+  firstname: {
+    type: 'string'
+  },
+  lastname: {
+    type: 'string'
+  },
+  email: {
+    type: 'string',
+    subtype: {
+      type: 'email'
+    }
+  },
+  roles: {
+    type: 'array',
+    subtype: {
+      type:'string'
+    }
+  },
+  status: {
+    type: 'string',
+    values: ['active', 'inactive']
+  },
+  create_date: {
+    type: 'date'
+  },
+  create_by: {
+    type: 'string'
+  }
+};
+
 // sheet0
 var sheet0 = new Vue({
   el: '#sheet0',
   store,
   data: {
-    name: 'budget',
-    caption: 'Budget List',
+    name: 'testusers',
+    caption: 'User List',
     columns: [
-      { name:'firstname', display:'First Name', type:'input' },
-      { name:'lastname', display:'Last Name', type:'input' },
-      { name:'fullname', display:'Full Name', type:'view' }
+      { name:'firstname', display:'First Name', type:'string' },
+      { name:'lastname', display:'Last Name', type:'string' },
+      { name:'roles', display:'Roles', type:'array', values:['user', 'manager', 'admin'] },
+      { name:'status', display:'Status', type:'string', values:['active', 'inactive'] },
+      { name:'create_date', display:'Create Date', type:'date' },
+      { name:'create_by', display:'Created By', type:'string' }
     ]
   },
   components: {

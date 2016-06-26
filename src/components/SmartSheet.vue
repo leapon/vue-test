@@ -6,7 +6,7 @@
     </tr>
     <tr v-for="(index, item) in items">
       <td v-for="column in columns">
-        <template v-if="column.type == 'input'">
+        <template v-if="column.type == 'string'">
           <input class="smartsheet-input-cell"
             data-row-index="{{ index }}"
             data-column="{{ column.name }}"
