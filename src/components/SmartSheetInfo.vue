@@ -1,7 +1,5 @@
 <template>
   <pre>{{ items|json 4 }}</pre>
-  <hr/>
-  <pre>{{ items2|json 4 }}</pre>
 </template>
 
 <script>
@@ -15,11 +13,11 @@ export default {
   },
   vuex: {
     getters: {
-      items: state => state.items
+      // items: state => state.items
     }
   },
   computed: {
-    items2: function() {
+    items: function() {
       return store.state[this.name];
     }
   }

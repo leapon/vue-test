@@ -69,11 +69,23 @@ var sheet0 = new Vue({
 });
 
 var testUsers = [
-  { firstname:'Mary', lastname:'Poppin', roles:[], status:'active', create_date:'', create_by:'' },
-  { firstname:'Ben', lastname:'Aflec', roles:[], status:'active', create_date:'', create_by:'' },
-  { firstname:'Eric', lastname:'Boldwin', roles:[], status:'inactive', create_date:'', create_by:'' }
+  { firstname:'Max', lastname:'Philps', roles:[], status:'active', create_date:'', create_by:'' },
+  { firstname:'Bent', lastname:'Aflec', roles:[], status:'active', create_date:'', create_by:'' },
+  { firstname:'Zack', lastname:'Milton', roles:[], status:'inactive', create_date:'', create_by:'' }
 ];
 setStoreItem(store, storeItemName, testUsers);
+
+// sheet info0
+var info0 = new Vue({
+  el: '#info0',
+  store,
+  data: {
+    name: storeItemName
+  },
+  components: {
+    SmartSheetInfo
+  }
+});
 
 // sheet1
 var sheet1 = new Vue({
@@ -165,7 +177,7 @@ var sheet4 = new Vue({
   }
 });
 
-// sheet info
+// sheet info4
 var info4 = new Vue({
   el: '#info4',
   store,
