@@ -161,6 +161,9 @@ var sheet4 = new Vue({
 var info4 = new Vue({
   el: '#info4',
   store,
+  data: {
+    name: 'items'
+  },
   components: {
     SmartSheetInfo
   }
