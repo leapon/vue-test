@@ -47,7 +47,7 @@ var userModel = {
 };
 
 // sheet0
-var storeItemName = 'testusers';
+var storeItemName = 'items';
 var sheet0 = new Vue({
   el: '#sheet0',
   store,
@@ -192,6 +192,6 @@ var info4 = new Vue({
 var items = [
   { firstname:'Mary', lastname:'Poppin', fullname:'', roles:[], status:'active', create_date:'', create_by:'' },
   { firstname:'Ben', lastname:'Aflec', fullname:'', roles:[], status:'active', create_date:'', create_by:'' },
-  { firstname:'Eric', lastname:'Boldwin', fullname:'', roles:[], status:'active', create_date:'', create_by:'' }
+  { firstname:'Eric', lastname:'Boldwin', fullname:'', roles:['manager'], status:'inactive', create_date:'', create_by:'' }
 ];
 setitems(store, items);
