@@ -62,6 +62,7 @@ export default {
   },
   vuex: {
     getters: {
+      items: state => state.items
     },
     actions: {
       changeStoreItem
@@ -70,18 +71,23 @@ export default {
   components: {
   },
   computed: {
+    /*
     items: function() {
       return store.state[this.name];
     }
+    */
   },
   methods: {
     cellChange: function(event) {
       var index = $(event.srcElement).attr('data-row-index');
       var column = $(event.srcElement).attr('data-column');
       var value = event.srcElement.value;
+      console.log('>>> cellChange:', this.name, index, column, value);
+      /*
       console.log('>>> cellChange:', event.srcElement);
       console.log('>>> cellChange:', this.name, index, column, value);
       changeStoreItem(this.$store, this.name, index, column, value)
+      */
     }
   }
 }
