@@ -2,9 +2,30 @@ import Vue from 'vue'
 import store from './vuex/store'
 import { setform } from './vuex/actions'
 
+import SmartForm from './components/SmartForm.vue'
 import SmartForm1 from './components/SmartForm1.vue'
 import SmartForm2 from './components/SmartForm2.vue'
 import SmartFormInfo from './components/SmartFormInfo.vue'
+
+// form0
+var form2 = new Vue({
+  el: '#form0',
+  store,
+  data: {
+    columns: [
+      { name:'firstname', type:'input' },
+      { name:'lastname', type:'input' },
+      { name:'gender', type:'select-one', values:['male', 'female'] },
+      { name:'course', type:'select-multi', values:['math', 'english', 'pe'] },
+      { name:'grade', type:'select-radio', values:['grade1', 'grade2', 'grade3'] },
+      { name:'interest', type:'select-checkbox', values:['swimming', 'soccer', 'basketball', 'baseball'] },
+      { name:'comment', type:'text' }
+    ]
+  },
+  components: {
+    SmartForm
+  }
+});
 
 // form1
 var form1 = new Vue({
@@ -41,8 +62,8 @@ var form2 = new Vue({
   }
 });
 
-var info2 = new Vue({
-  el: '#info2',
+var info0 = new Vue({
+  el: '#info0',
   store,
   data: {
   },
