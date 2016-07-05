@@ -23,9 +23,9 @@ var form0 = new Vue({
   }
 });
 
-/*
-var form0 = new Vue({
-  el: '#form0',
+// form0b
+var form0b = new Vue({
+  el: '#form0b',
   store,
   data: {
     columns: [
@@ -42,7 +42,6 @@ var form0 = new Vue({
     SmartForm
   }
 });
-*/
 
 // form1
 var form1 = new Vue({
