@@ -36,6 +36,7 @@ export const changeitem = ({ dispatch, state }, index, column, value) => {
 export const setform = ({ dispatch, state }, form) => {
   dispatch('SETFORM', form)
 }
+
 export const changeform = ({ dispatch, state }, column, value) => {
   //dispatch('CHANGEITEM', index, column, value)
 }
