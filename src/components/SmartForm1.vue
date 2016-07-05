@@ -16,9 +16,6 @@
 </template>
 
 <script>
-// use table to layout form
-//import { changeform } from '../vuex/actions';
-
 export default {
   props: ['columns'],
   data: function() {

@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form class="{{ form_class }}">
     <template v-for="column in columns">
     <div class="form-group">
       <label for="{{ column.name }}">{{ column.display || column.name }}</label>
@@ -71,7 +71,7 @@
 //import { changeform } from '../vuex/actions';
 
 export default {
-  props: ['columns'],
+  props: ['columns', 'mode'],
   data: function() {
     return {};
   },
@@ -86,6 +86,15 @@ export default {
   components: {
   },
   computed: {
+    form_class: function() {
+      var result = '';
+      console.log('compute form_class:', this.mode);
+      console.log('compute form_class:', this.$get('mode'));
+      if (this.$get('mode') == 'inline') {
+        result = 'form-inline';
+      }
+      return result;
+    }
   },
   methods: {
     formValueChange: function(event) {

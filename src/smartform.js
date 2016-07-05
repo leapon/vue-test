@@ -8,7 +8,23 @@ import SmartForm2 from './components/SmartForm2.vue'
 import SmartFormInfo from './components/SmartFormInfo.vue'
 
 // form0
-var form2 = new Vue({
+var form0 = new Vue({
+  el: '#form0',
+  store,
+  data: {
+    mode: 'inline',
+    columns: [
+      { name:'firstname', type:'input' },
+      { name:'lastname', type:'input' }
+    ]
+  },
+  components: {
+    SmartForm
+  }
+});
+
+/*
+var form0 = new Vue({
   el: '#form0',
   store,
   data: {
@@ -26,12 +42,14 @@ var form2 = new Vue({
     SmartForm
   }
 });
+*/
 
 // form1
 var form1 = new Vue({
   el: '#form1',
   store,
   data: {
+    mode: 'inline',
     columns: [
       { name:'firstname', display:'First Name', type:'input' },
       { name:'lastname', display:'Last Name', type:'input' }
