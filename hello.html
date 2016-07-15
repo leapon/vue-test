@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Vue Component Demo</title>
-    <link rel="stylesheet" href="/library/bootstrap/css/bootstrap.min.css" />
-    <script src="/library/jquery/jquery.min.js"></script>
-    <script src="/library/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -16,10 +16,10 @@
       </div>
       <div class="row">
         <div class="col-md-6" id="component1">
-          <hello></hello>
+          <hello :name="name"></hello>
         </div>
       </div>
     </div>
-    <script src="/demo/build/hello_index.js"></script>
+    <script src="dist/hello.js"></script>
   </body>
 </html>

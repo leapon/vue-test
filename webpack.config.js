@@ -3,6 +3,7 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: {
+    hello: ['./src/hello.js'],
     build: ['./src/main.js'],
     explorer: ['./src/explorer.js'],
     directive: ['./src/directive.js'],
